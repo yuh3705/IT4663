@@ -1,81 +1,161 @@
 ﻿Thuật toán,Bộ dữ liệu,Số nhân viên,Số ngày,Trạng thái,Giá trị hàm mục tiêu,Thời gian chạy(s)
-CP-SAT (easy),test_1.txt,10,8,OPTIMAL,1.0,0.0374
-MILP (easy),test_1.txt,10,8,OPTIMAL,1.0,0.0173
-CP-SAT (easy),test_10.txt,14,10,OPTIMAL,2.0,0.0164
-MILP (easy),test_10.txt,14,10,OPTIMAL,2.0,0.0113
-CP-SAT (easy),test_2.txt,19,10,OPTIMAL,2.0,0.0217
-MILP (easy),test_2.txt,19,10,OPTIMAL,2.0,0.0096
-CP-SAT (easy),test_3.txt,14,10,OPTIMAL,2.0,0.0142
-MILP (easy),test_3.txt,14,10,OPTIMAL,2.0,0.0111
-CP-SAT (easy),test_4.txt,17,8,OPTIMAL,1.0,0.0165
-MILP (easy),test_4.txt,17,8,OPTIMAL,1.0,0.0109
-CP-SAT (easy),test_5.txt,13,9,OPTIMAL,1.0,0.015
-MILP (easy),test_5.txt,13,9,OPTIMAL,1.0,0.0054
-CP-SAT (easy),test_6.txt,17,10,OPTIMAL,2.0,0.0192
-MILP (easy),test_6.txt,17,10,OPTIMAL,2.0,0.0146
-CP-SAT (easy),test_7.txt,14,8,OPTIMAL,2.0,0.0144
-MILP (easy),test_7.txt,14,8,OPTIMAL,2.0,0.0104
-CP-SAT (easy),test_8.txt,20,8,OPTIMAL,2.0,0.0207
-MILP (easy),test_8.txt,20,8,OPTIMAL,2.0,0.0158
-CP-SAT (easy),test_9.txt,10,8,OPTIMAL,1.0,0.0099
-MILP (easy),test_9.txt,10,8,OPTIMAL,1.0,0.0039
-CP-SAT (hard),test_1.txt,62,29,OPTIMAL,5.0,0.1622
-MILP (hard),test_1.txt,62,29,OPTIMAL,5.0,0.546
-CP-SAT (hard),test_10.txt,90,28,OPTIMAL,5.0,0.2103
-MILP (hard),test_10.txt,90,28,OPTIMAL,5.0,0.8303
-CP-SAT (hard),test_2.txt,88,28,OPTIMAL,5.0,0.1925
-MILP (hard),test_2.txt,88,28,OPTIMAL,5.0,0.9127
-CP-SAT (hard),test_3.txt,70,30,OPTIMAL,5.0,0.1801
-MILP (hard),test_3.txt,70,30,OPTIMAL,5.0,0.5742
-CP-SAT (hard),test_4.txt,71,31,OPTIMAL,5.0,0.1691
-MILP (hard),test_4.txt,71,31,OPTIMAL,5.0,0.6758
-CP-SAT (hard),test_5.txt,68,28,OPTIMAL,5.0,0.1585
-MILP (hard),test_5.txt,68,28,OPTIMAL,5.0,0.5883
-CP-SAT (hard),test_6.txt,60,31,OPTIMAL,5.0,0.172
-MILP (hard),test_6.txt,60,31,OPTIMAL,5.0,0.4723
-CP-SAT (hard),test_7.txt,63,31,OPTIMAL,5.0,0.1552
-MILP (hard),test_7.txt,63,31,OPTIMAL,5.0,0.523
-CP-SAT (hard),test_8.txt,77,30,OPTIMAL,5.0,0.2149
-MILP (hard),test_8.txt,77,30,OPTIMAL,5.0,0.6755
-CP-SAT (hard),test_9.txt,87,30,OPTIMAL,5.0,0.211
-MILP (hard),test_9.txt,87,30,OPTIMAL,5.0,0.7383
-CP-SAT (medium),test_1.txt,48,15,OPTIMAL,3.0,0.0703
-MILP (medium),test_1.txt,48,15,OPTIMAL,3.0,0.1328
-CP-SAT (medium),test_10.txt,45,14,OPTIMAL,2.0,0.0603
-MILP (medium),test_10.txt,45,14,OPTIMAL,2.0,0.0836
-CP-SAT (medium),test_2.txt,37,20,OPTIMAL,3.0,0.0611
-MILP (medium),test_2.txt,37,20,OPTIMAL,3.0,0.0679
-CP-SAT (medium),test_3.txt,49,17,OPTIMAL,3.0,0.0739
-MILP (medium),test_3.txt,49,17,OPTIMAL,3.0,0.1207
-CP-SAT (medium),test_4.txt,40,14,OPTIMAL,3.0,0.0499
-MILP (medium),test_4.txt,40,14,OPTIMAL,3.0,0.0515
-CP-SAT (medium),test_5.txt,31,14,OPTIMAL,2.0,0.0399
-MILP (medium),test_5.txt,31,14,OPTIMAL,2.0,0.1095
-CP-SAT (medium),test_6.txt,42,15,OPTIMAL,3.0,0.0642
-MILP (medium),test_6.txt,42,15,OPTIMAL,3.0,0.0767
-CP-SAT (medium),test_7.txt,44,16,OPTIMAL,3.0,0.065
-MILP (medium),test_7.txt,44,16,OPTIMAL,3.0,0.0769
-CP-SAT (medium),test_8.txt,39,20,OPTIMAL,3.0,0.0631
-MILP (medium),test_8.txt,39,20,OPTIMAL,3.0,0.0891
-CP-SAT (medium),test_9.txt,44,14,OPTIMAL,2.0,0.0565
-MILP (medium),test_9.txt,44,14,OPTIMAL,2.0,0.0724
-CP-SAT (stress),test_1.txt,152,71,OPTIMAL,11.0,1.1659
-MILP (stress),test_1.txt,152,71,OPTIMAL,11.0,10.0613
-CP-SAT (stress),test_10.txt,123,67,OPTIMAL,10.0,0.9393
-MILP (stress),test_10.txt,123,67,OPTIMAL,10.0,7.0941
-CP-SAT (stress),test_2.txt,198,89,OPTIMAL,14.0,15.1942
-MILP (stress),test_2.txt,198,89,OPTIMAL,14.0,27.855
-CP-SAT (stress),test_3.txt,181,84,OPTIMAL,13.0,6.1959
-MILP (stress),test_3.txt,181,84,OPTIMAL,13.0,21.9614
-CP-SAT (stress),test_4.txt,134,66,OPTIMAL,10.0,1.2148
-MILP (stress),test_4.txt,134,66,OPTIMAL,10.0,6.2201
-CP-SAT (stress),test_5.txt,131,87,OPTIMAL,13.0,1.3626
-MILP (stress),test_5.txt,131,87,OPTIMAL,13.0,10.9898
-CP-SAT (stress),test_6.txt,137,76,OPTIMAL,12.0,1.1375
-MILP (stress),test_6.txt,137,76,OPTIMAL,12.0,10.2939
-CP-SAT (stress),test_7.txt,135,61,OPTIMAL,10.0,0.9142
-MILP (stress),test_7.txt,135,61,OPTIMAL,10.0,7.3235
-CP-SAT (stress),test_8.txt,186,66,OPTIMAL,10.0,1.8372
-MILP (stress),test_8.txt,186,66,OPTIMAL,10.0,15.3733
-CP-SAT (stress),test_9.txt,158,67,OPTIMAL,10.0,1.845
-MILP (stress),test_9.txt,158,67,OPTIMAL,10.0,9.6358
+CP-SAT (easy),test_1.txt,10,8,OPTIMAL,1.0,0.0698
+MILP (easy),test_1.txt,10,8,OPTIMAL,1.0,0.0325
+Greedy (easy),test_1.txt,10,8,GREEDY,1.0,0.0003
+Tabu Search (easy),test_1.txt,10,8,HEURISTIC,1.0,0.0279
+CP-SAT (easy),test_10.txt,14,10,OPTIMAL,2.0,0.0539
+MILP (easy),test_10.txt,14,10,OPTIMAL,2.0,0.0182
+Greedy (easy),test_10.txt,14,10,GREEDY,2.0,0.0006
+Tabu Search (easy),test_10.txt,14,10,HEURISTIC,2.0,2.2626
+CP-SAT (easy),test_2.txt,19,10,OPTIMAL,2.0,0.0799
+MILP (easy),test_2.txt,19,10,OPTIMAL,2.0,0.0176
+Greedy (easy),test_2.txt,19,10,GREEDY,2.0,0.0013
+Tabu Search (easy),test_2.txt,19,10,HEURISTIC,2.0,1.046
+CP-SAT (easy),test_3.txt,14,10,OPTIMAL,2.0,0.048
+MILP (easy),test_3.txt,14,10,OPTIMAL,2.0,0.0186
+Greedy (easy),test_3.txt,14,10,GREEDY,2.0,0.0005
+Tabu Search (easy),test_3.txt,14,10,HEURISTIC,2.0,0.6331
+CP-SAT (easy),test_4.txt,17,8,OPTIMAL,1.0,0.0481
+MILP (easy),test_4.txt,17,8,OPTIMAL,1.0,0.0197
+Greedy (easy),test_4.txt,17,8,GREEDY,1.0,0.0006
+Tabu Search (easy),test_4.txt,17,8,HEURISTIC,1.0,0.0052
+CP-SAT (easy),test_5.txt,13,9,OPTIMAL,1.0,0.0518
+MILP (easy),test_5.txt,13,9,OPTIMAL,1.0,0.0121
+Greedy (easy),test_5.txt,13,9,GREEDY,1.0,0.0006
+Tabu Search (easy),test_5.txt,13,9,HEURISTIC,1.0,4.6135
+CP-SAT (easy),test_6.txt,17,10,OPTIMAL,2.0,0.0523
+MILP (easy),test_6.txt,17,10,OPTIMAL,2.0,0.0213
+Greedy (easy),test_6.txt,17,10,GREEDY,2.0,0.0007
+Tabu Search (easy),test_6.txt,17,10,HEURISTIC,2.0,7.9864
+CP-SAT (easy),test_7.txt,14,8,OPTIMAL,2.0,0.0464
+MILP (easy),test_7.txt,14,8,OPTIMAL,2.0,0.0161
+Greedy (easy),test_7.txt,14,8,GREEDY,2.0,0.0004
+Tabu Search (easy),test_7.txt,14,8,HEURISTIC,2.0,0.0071
+CP-SAT (easy),test_8.txt,20,8,OPTIMAL,2.0,0.0557
+MILP (easy),test_8.txt,20,8,OPTIMAL,2.0,0.025
+Greedy (easy),test_8.txt,20,8,GREEDY,2.0,0.0007
+Tabu Search (easy),test_8.txt,20,8,HEURISTIC,2.0,0.2789
+CP-SAT (easy),test_9.txt,10,8,OPTIMAL,1.0,0.0339
+MILP (easy),test_9.txt,10,8,OPTIMAL,1.0,0.0056
+Greedy (easy),test_9.txt,10,8,GREEDY,1.0,0.0003
+Tabu Search (easy),test_9.txt,10,8,HEURISTIC,1.0,0.0035
+CP-SAT (hard),test_1.txt,62,29,OPTIMAL,5.0,0.3865
+MILP (hard),test_1.txt,62,29,OPTIMAL,5.0,0.9434
+Greedy (hard),test_1.txt,62,29,GREEDY,5.0,0.0211
+Tabu Search (hard),test_1.txt,62,29,HEURISTIC,5.0,60.0018
+CP-SAT (hard),test_10.txt,90,28,OPTIMAL,5.0,0.5236
+MILP (hard),test_10.txt,90,28,OPTIMAL,5.0,1.25
+Greedy (hard),test_10.txt,90,28,GREEDY,5.0,0.0317
+Tabu Search (hard),test_10.txt,90,28,HEURISTIC,5.0,60.0061
+CP-SAT (hard),test_2.txt,88,28,OPTIMAL,5.0,0.4894
+MILP (hard),test_2.txt,88,28,OPTIMAL,5.0,1.3536
+Greedy (hard),test_2.txt,88,28,GREEDY,5.0,0.0273
+Tabu Search (hard),test_2.txt,88,28,HEURISTIC,5.0,60.008
+CP-SAT (hard),test_3.txt,70,30,OPTIMAL,5.0,0.3651
+MILP (hard),test_3.txt,70,30,OPTIMAL,5.0,0.8041
+Greedy (hard),test_3.txt,70,30,GREEDY,5.0,0.0213
+Tabu Search (hard),test_3.txt,70,30,HEURISTIC,5.0,60.019
+CP-SAT (hard),test_4.txt,71,31,OPTIMAL,5.0,0.3978
+MILP (hard),test_4.txt,71,31,OPTIMAL,5.0,0.9839
+Greedy (hard),test_4.txt,71,31,GREEDY,5.0,0.0211
+Tabu Search (hard),test_4.txt,71,31,HEURISTIC,5.0,60.0382
+CP-SAT (hard),test_5.txt,68,28,OPTIMAL,5.0,0.3823
+MILP (hard),test_5.txt,68,28,OPTIMAL,5.0,0.8817
+Greedy (hard),test_5.txt,68,28,GREEDY,5.0,0.0172
+Tabu Search (hard),test_5.txt,68,28,HEURISTIC,5.0,60.011
+CP-SAT (hard),test_6.txt,60,31,OPTIMAL,5.0,0.3303
+MILP (hard),test_6.txt,60,31,OPTIMAL,5.0,0.7071
+Greedy (hard),test_6.txt,60,31,GREEDY,5.0,0.0156
+Tabu Search (hard),test_6.txt,60,31,HEURISTIC,5.0,60.0396
+CP-SAT (hard),test_7.txt,63,31,OPTIMAL,5.0,0.3621
+MILP (hard),test_7.txt,63,31,OPTIMAL,5.0,0.6286
+Greedy (hard),test_7.txt,63,31,GREEDY,5.0,0.017
+Tabu Search (hard),test_7.txt,63,31,HEURISTIC,5.0,60.0355
+CP-SAT (hard),test_8.txt,77,30,OPTIMAL,5.0,0.4565
+MILP (hard),test_8.txt,77,30,OPTIMAL,5.0,0.9809
+Greedy (hard),test_8.txt,77,30,GREEDY,5.0,0.0236
+Tabu Search (hard),test_8.txt,77,30,HEURISTIC,5.0,60.0324
+CP-SAT (hard),test_9.txt,87,30,OPTIMAL,5.0,0.5012
+MILP (hard),test_9.txt,87,30,OPTIMAL,5.0,1.0979
+Greedy (hard),test_9.txt,87,30,GREEDY,5.0,0.0312
+Tabu Search (hard),test_9.txt,87,30,HEURISTIC,5.0,60.0552
+CP-SAT (medium),test_1.txt,48,15,OPTIMAL,3.0,0.1732
+MILP (medium),test_1.txt,48,15,OPTIMAL,3.0,0.1838
+Greedy (medium),test_1.txt,48,15,GREEDY,3.0,0.0048
+Tabu Search (medium),test_1.txt,48,15,HEURISTIC,3.0,58.4237
+CP-SAT (medium),test_10.txt,45,14,OPTIMAL,2.0,0.1348
+MILP (medium),test_10.txt,45,14,OPTIMAL,2.0,0.1134
+Greedy (medium),test_10.txt,45,14,GREEDY,2.0,0.0039
+Tabu Search (medium),test_10.txt,45,14,HEURISTIC,2.0,60.0033
+CP-SAT (medium),test_2.txt,37,20,OPTIMAL,3.0,0.137
+MILP (medium),test_2.txt,37,20,OPTIMAL,3.0,0.0944
+Greedy (medium),test_2.txt,37,20,GREEDY,3.0,0.0041
+Tabu Search (medium),test_2.txt,37,20,HEURISTIC,3.0,60.0152
+CP-SAT (medium),test_3.txt,49,17,OPTIMAL,3.0,0.1744
+MILP (medium),test_3.txt,49,17,OPTIMAL,3.0,0.1617
+Greedy (medium),test_3.txt,49,17,GREEDY,3.0,0.0057
+Tabu Search (medium),test_3.txt,49,17,HEURISTIC,3.0,60.0093
+CP-SAT (medium),test_4.txt,40,14,OPTIMAL,3.0,0.1209
+MILP (medium),test_4.txt,40,14,OPTIMAL,3.0,0.0715
+Greedy (medium),test_4.txt,40,14,GREEDY,3.0,0.0032
+Tabu Search (medium),test_4.txt,40,14,HEURISTIC,3.0,20.4713
+CP-SAT (medium),test_5.txt,31,14,OPTIMAL,2.0,0.0962
+MILP (medium),test_5.txt,31,14,OPTIMAL,2.0,0.1626
+Greedy (medium),test_5.txt,31,14,GREEDY,2.0,0.0021
+Tabu Search (medium),test_5.txt,31,14,HEURISTIC,2.0,52.2958
+CP-SAT (medium),test_6.txt,42,15,OPTIMAL,3.0,0.1295
+MILP (medium),test_6.txt,42,15,OPTIMAL,3.0,0.1073
+Greedy (medium),test_6.txt,42,15,GREEDY,3.0,0.0036
+Tabu Search (medium),test_6.txt,42,15,HEURISTIC,3.0,36.5023
+CP-SAT (medium),test_7.txt,44,16,OPTIMAL,3.0,0.1407
+MILP (medium),test_7.txt,44,16,OPTIMAL,3.0,0.1095
+Greedy (medium),test_7.txt,44,16,GREEDY,3.0,0.0046
+Tabu Search (medium),test_7.txt,44,16,HEURISTIC,3.0,55.6637
+CP-SAT (medium),test_8.txt,39,20,OPTIMAL,3.0,0.1343
+MILP (medium),test_8.txt,39,20,OPTIMAL,3.0,0.1217
+Greedy (medium),test_8.txt,39,20,GREEDY,3.0,0.0047
+Tabu Search (medium),test_8.txt,39,20,HEURISTIC,3.0,60.0099
+CP-SAT (medium),test_9.txt,44,14,OPTIMAL,2.0,0.1391
+MILP (medium),test_9.txt,44,14,OPTIMAL,2.0,0.099
+Greedy (medium),test_9.txt,44,14,GREEDY,2.0,0.0039
+Tabu Search (medium),test_9.txt,44,14,HEURISTIC,2.0,60.0008
+CP-SAT (stress),test_1.txt,152,71,OPTIMAL,11.0,4.0155
+MILP (stress),test_1.txt,152,71,OPTIMAL,11.0,14.5781
+Greedy (stress),test_1.txt,152,71,GREEDY,11.0,0.2726
+Tabu Search (stress),test_1.txt,152,71,HEURISTIC,11.0,60.0711
+CP-SAT (stress),test_10.txt,123,67,OPTIMAL,10.0,2.2414
+MILP (stress),test_10.txt,123,67,OPTIMAL,10.0,10.0996
+Greedy (stress),test_10.txt,123,67,NO_FEASIBLE_SOLUTION,,0.0508
+Tabu Search (stress),test_10.txt,123,67,HEURISTIC,10.0,60.2509
+CP-SAT (stress),test_2.txt,198,89,OPTIMAL,14.0,7.4543
+MILP (stress),test_2.txt,198,89,OPTIMAL,14.0,34.6905
+Greedy (stress),test_2.txt,198,89,NO_FEASIBLE_SOLUTION,,0.2453
+Tabu Search (stress),test_2.txt,198,89,NO_FEASIBLE_SOLUTION,,0.6103
+CP-SAT (stress),test_3.txt,181,84,OPTIMAL,13.0,6.3261
+MILP (stress),test_3.txt,181,84,OPTIMAL,13.0,28.7647
+Greedy (stress),test_3.txt,181,84,NO_FEASIBLE_SOLUTION,,0.2991
+Tabu Search (stress),test_3.txt,181,84,NO_FEASIBLE_SOLUTION,,0.1998
+CP-SAT (stress),test_4.txt,134,66,OPTIMAL,10.0,2.5303
+MILP (stress),test_4.txt,134,66,OPTIMAL,10.0,9.3795
+Greedy (stress),test_4.txt,134,66,NO_FEASIBLE_SOLUTION,,0.1124
+Tabu Search (stress),test_4.txt,134,66,NO_FEASIBLE_SOLUTION,,0.3953
+CP-SAT (stress),test_5.txt,131,87,OPTIMAL,13.0,3.7565
+MILP (stress),test_5.txt,131,87,OPTIMAL,13.0,14.6425
+Greedy (stress),test_5.txt,131,87,GREEDY,13.0,0.2666
+Tabu Search (stress),test_5.txt,131,87,HEURISTIC,13.0,60.0626
+CP-SAT (stress),test_6.txt,137,76,OPTIMAL,12.0,3.0322
+MILP (stress),test_6.txt,137,76,OPTIMAL,12.0,14.0256
+Greedy (stress),test_6.txt,137,76,GREEDY,12.0,0.2361
+Tabu Search (stress),test_6.txt,137,76,NO_FEASIBLE_SOLUTION,,0.9152
+CP-SAT (stress),test_7.txt,135,61,OPTIMAL,10.0,2.4563
+MILP (stress),test_7.txt,135,61,OPTIMAL,10.0,9.4903
+Greedy (stress),test_7.txt,135,61,NO_FEASIBLE_SOLUTION,,0.0838
+Tabu Search (stress),test_7.txt,135,61,NO_FEASIBLE_SOLUTION,,0.6556
+CP-SAT (stress),test_8.txt,186,66,OPTIMAL,10.0,4.1726
+MILP (stress),test_8.txt,186,66,OPTIMAL,10.0,19.0037
+Greedy (stress),test_8.txt,186,66,NO_FEASIBLE_SOLUTION,,0.0536
+Tabu Search (stress),test_8.txt,186,66,HEURISTIC,10.0,60.0157
+CP-SAT (stress),test_9.txt,158,67,OPTIMAL,10.0,3.5642
+MILP (stress),test_9.txt,158,67,OPTIMAL,10.0,13.4924
+Greedy (stress),test_9.txt,158,67,NO_FEASIBLE_SOLUTION,,0.2069
+Tabu Search (stress),test_9.txt,158,67,NO_FEASIBLE_SOLUTION,,1.0014

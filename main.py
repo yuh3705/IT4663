@@ -3,6 +3,8 @@ import glob
 from utils.data_loader import read_input
 from utils.logger import ExperimentLogger
 from solvers.logic_exact import cp_solver, milp_solver
+from solvers.greedy import greedy_solver
+from solvers.local_search import tabu_search_solver
 
 def main():
     logger = ExperimentLogger()
@@ -31,6 +33,12 @@ def main():
         # Chạy MILP
         res_milp = milp_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
         logger.log(f"MILP ({category})", fname, N, D, res_milp['status'], res_milp['obj'], res_milp['runtime'])
+
+        res_greedy = greedy_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
+        logger.log(f"Greedy ({category})", fname, N, D, res_greedy['status'], res_greedy['obj'], res_greedy['runtime'])
+
+        res_tabu = tabu_search_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
+        logger.log(f"Tabu Search ({category})", fname, N, D, res_tabu['status'], res_tabu['obj'], res_tabu['runtime'])
 
     logger.save("results/final_report.csv")
 
