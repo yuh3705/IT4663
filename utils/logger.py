@@ -2,7 +2,8 @@ import pandas as pd
 import os
 
 class ExperimentLogger:
-    def __init__(self):
+    def __init__(self, filepath):
+        self.filepath = filepath
         self.results = []
 
     def log(self, solver_name, dataset, N, D, status, obj, runtime):
@@ -14,11 +15,15 @@ class ExperimentLogger:
             "Trạng thái" : status,
             "Giá trị hàm mục tiêu" : obj,
             "Thời gian chạy(s)" : round(runtime, 4)
+            # "Gap time" : gap_time
         })
 
-    def save(self, filepath):
-        os.makedirs(os.path.dirname(filepath), exist_ok=True)
+    def save(self):
+        # Nếu danh sách rỗng (thuật toán không được chạy) thì không tạo file
+        if not self.results:
+            return 
+            
+        # Tạo thư mục nếu chưa tồn tại dựa trên filepath
+        os.makedirs(os.path.dirname(self.filepath), exist_ok=True)
         df = pd.DataFrame(self.results)
-        df.to_csv(filepath, index=False, encoding='utf-8-sig')
-
-    
+        df.to_csv(self.filepath, index=False, encoding='utf-8-sig')

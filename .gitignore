@@ -1,1 +1,22 @@
+# Byte-compiled / optimized / DLL files (Python cache)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
 results/

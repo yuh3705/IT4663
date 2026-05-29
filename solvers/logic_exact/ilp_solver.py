@@ -1,0 +1,73 @@
+import sys
+from ortools.linear_solver import pywraplp
+import time
+
+def solve(N, D, A, B, F, time_limit=300):
+    solver = pywraplp.Solver.CreateSolver('SCIP')
+    if not solver:
+        print("Không thể khởi tạo bộ giải SCIP.")
+        return
+
+    F_set = {i: set(F[i]) for i in range(1, N + 1)}
+
+    x = {}
+    for i in range(1, N + 1):
+        for d in range(1, D + 1):
+            if d in F_set[i]:
+                x[i, d, 0] = solver.IntVar(1, 1, f'x_{i}_{d}_0')
+                for s in range(1, 5):
+                    x[i, d, s] = solver.IntVar(0, 0, f'x_{i}_{d}_{s}')
+            else:
+                for s in range(5):
+                    x[i, d, s] = solver.IntVar(0, 1, f'x_{i}_{d}_{s}')
+
+    for i in range(1, N + 1):
+        for d in range(1, D + 1):
+            solver.Add(sum(x[i, d, s] for s in range(5)) == 1)
+
+    for i in range(1, N + 1):
+        for d in range(1, D):
+            solver.Add(x[i, d, 4] <= x[i, d + 1, 0])
+
+    for d in range(1, D + 1):
+        for s in range(1, 5):
+            total_staff = sum(x[i, d, s] for i in range(1, N + 1))
+            solver.Add(total_staff >= A)
+            solver.Add(total_staff <= B)
+
+    max_night_shift = solver.IntVar(0, D, 'max_night_shift')
+    
+    for i in range(1, N + 1):
+        total_night_shift_i = sum(x[i, d, 4] for d in range(1, D + 1))
+        solver.Add(max_night_shift >= total_night_shift_i)
+
+    solver.Minimize(max_night_shift)
+
+    solver.set_time_limit(time_limit * 1000) 
+
+    start_time = time.time()
+    status = solver.Solve()
+    runtime = time.time() - start_time
+
+    # gap_time = solver.Objective().Value() - solver.BestObjectiveBound() if status == pywraplp.Solver.INFEASIBLE else None
+
+    if status == pywraplp.Solver.OPTIMAL or status == pywraplp.Solver.FEASIBLE:
+        for i in range(1, N + 1):
+            row_result = []
+            for d in range(1, D + 1):
+                for s in range(5):
+                    if x[i,d,s].solution_value() > 0.5:
+                        row_result.append(str(s))
+                        break
+            print(" ".join(row_result))
+    else:
+        print("Không tìm thấy phương án xếp ca hợp lệ.")
+
+    obj_val = solver.Objective().Value() if status in [pywraplp.Solver.OPTIMAL, pywraplp.Solver.FEASIBLE] else None
+
+    return {
+        "status": status,
+        "obj": obj_val,
+        "runtime": runtime,
+        # "gap_time": gap_time
+    }

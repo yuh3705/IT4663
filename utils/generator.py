@@ -17,10 +17,10 @@ def generate_test_case(N, D, A, B, prob_off = 0.1, file_path="data/input.txt"):
 
 if __name__ == "__main__":
     configs = [
-        {"folder": "easy",   "N_range": (10, 20),  "D_range": (7, 10),   "prob": 0.1},
-        {"folder": "medium", "N_range": (30, 50),  "D_range": (14, 21),  "prob": 0.15},
-        {"folder": "hard",   "N_range": (60, 90),  "D_range": (28, 31),  "prob": 0.2},
-        {"folder": "stress", "N_range": (120, 200), "D_range": (60, 90),  "prob": 0.25},
+        {"folder": "easy",   "N_range": (5, 20),  "D_range": (1, 7),   "prob": 0.1},
+        {"folder": "medium", "N_range": (20, 100),  "D_range": (8, 30),  "prob": 0.15},
+        {"folder": "hard",   "N_range": (100, 300),  "D_range": (30, 100),  "prob": 0.2},
+        {"folder": "stress", "N_range": (300, 500), "D_range": (100, 200),  "prob": 0.25},
     ]
 
     for cfg in configs:

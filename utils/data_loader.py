@@ -18,3 +18,18 @@ def read_input(file_path):
     
     return N, D, A, B, days_off
 
+
+# F = [[False] * D for _ in range(N + 1)]
+    
+#     for i in range(1, N + 1):
+#         if i in days_off:
+#             for day in days_off[i]:
+#                 # Ép kiểu về int nếu trong days_off vẫn đang để dạng chuỗi
+#                 d_idx = int(day) 
+                
+#                 # Kiểm tra điều kiện biên để tránh tràn chỉ số (IndexError)
+#                 # Giả định file input lưu index ngày từ 0 đến D-1.
+#                 # Nếu file input lưu từ 1 đến D, bạn hãy sửa thành: 0 <= d_idx - 1 < D và F[i][d_idx - 1] = True
+#                 if 0 <= d_idx - 1 < D:
+#                     F[i][d_idx - 1] = True
+
