@@ -1,6 +1,7 @@
 import sys
 from ortools.linear_solver import pywraplp
 import time
+import math
 
 def solve(N, D, A, B, F, time_limit=300):
     solver = pywraplp.Solver.CreateSolver('SCIP')
@@ -35,7 +36,9 @@ def solve(N, D, A, B, F, time_limit=300):
             solver.Add(total_staff >= A)
             solver.Add(total_staff <= B)
 
-    max_night_shift = solver.IntVar(0, D, 'max_night_shift')
+    lower_bound = math.ceil((A * D) / N)
+    
+    max_night_shift = solver.IntVar(lower_bound, D, 'max_night_shift')
     
     for i in range(1, N + 1):
         total_night_shift_i = sum(x[i, d, 4] for d in range(1, D + 1))
@@ -68,6 +71,5 @@ def solve(N, D, A, B, F, time_limit=300):
     return {
         "status": status,
         "obj": obj_val,
-        "runtime": runtime,
-        # "gap_time": gap_time
+        "runtime": runtime
     }

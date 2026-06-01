@@ -2,16 +2,17 @@ import os
 import glob
 from utils.data_loader import read_input
 from utils.logger import ExperimentLogger
-from solvers.logic_exact import cp_solver, milp_solver
+from solvers.logic_exact import cp_solver, ilp_solver
 from solvers.greedy import greedy_solver
 from solvers.local_search import hill_climbing_solver, tabu_search_solver
 
 def main():
     logger = ExperimentLogger()
-    TIME_LIMIT = 60 # Giới hạn 60s cho mỗi test case
+    TIME_LIMIT = 1200 # Giới hạn 1000s cho mỗi test case
     
     # Dùng recursive=True để tìm tất cả file .txt trong mọi thư mục con của data/
     test_files = glob.glob("data/stress/*.txt", recursive=True)
+    # test_files = ["/Users/binhminh/Desktop/IT4663 PRJ/IT4663/data/stress/test_9.txt", "/Users/binhminh/Desktop/IT4663 PRJ/IT4663/data/stress/test_8.txt"]
     test_files.sort() # Sắp xếp để chạy từ easy đến stress
 
     for fpath in test_files:
@@ -27,23 +28,22 @@ def main():
         
         # Chạy CP-SAT
         # res_cp = cp_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        # Ghi log kèm theo category để dễ vẽ biểu đồ sau này
         # logger.log(f"CP-SAT ({category})", fname, N, D, res_cp['status'], res_cp['obj'], res_cp['runtime'])
         
-        # Chạy MILP
-        # res_milp = milp_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        # logger.log(f"MILP ({category})", fname, N, D, res_milp['status'], res_milp['obj'], res_milp['runtime'])
+        # Chạy ILP
+        res_ilp = ilp_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
+        logger.log(f"ILP ({category})", fname, N, D, res_ilp['status'], res_ilp['obj'], res_ilp['runtime'])
 
-        res_greedy = greedy_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        logger.log(f"Greedy ({category})", fname, N, D, res_greedy['status'], res_greedy['obj'], res_greedy['runtime'])
+        # res_greedy = greedy_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
+        # logger.log(f"Greedy ({category})", fname, N, D, res_greedy['status'], res_greedy['obj'], res_greedy['runtime'])
 
-        res_hill = hill_climbing_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        logger.log(f"Hill Climbing ({category})", fname, N, D, res_hill['status'], res_hill['obj'], res_hill['runtime'])
+        # res_hill = hill_climbing_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
+        # logger.log(f"Hill Climbing ({category})", fname, N, D, res_hill['status'], res_hill['obj'], res_hill['runtime'])
 
-        res_tabu = tabu_search_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        logger.log(f"Tabu Search ({category})", fname, N, D, res_tabu['status'], res_tabu['obj'], res_tabu['runtime'])
+        # res_tabu = tabu_search_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
+        # logger.log(f"Tabu Search ({category})", fname, N, D, res_tabu['status'], res_tabu['obj'], res_tabu['runtime'])
 
-    logger.save("results/final_report.csv")
+    logger.save()
 
 if __name__ == "__main__":
     main()
