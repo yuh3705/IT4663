@@ -1,4 +1,5 @@
 import random
+import math
 import sys
 import time
 
@@ -25,6 +26,10 @@ def _objective(schedule, N, D):
 
 def _score(night_count):
     return tuple(sorted(night_count.values(), reverse=True))
+
+
+def _status_from_obj(obj, N, D, A):
+    return "OPTIMAL" if obj == math.ceil(D * A / N) else "FEASIBLE"
 
 
 def _can_assign(schedule, i, d, shift, D, F):
@@ -232,13 +237,11 @@ def solve(N, D, A, B, F, time_limit=300, max_iterations=20000, seed=42, max_rest
 
             _apply_swap(schedule, night_count, i, j, d)
 
-    status = "HEURISTIC"
-    if time.time() - start_time >= time_limit:
-        status = "TIME_LIMIT"
+    obj = max(night_count.values())
 
     return {
-        "status": status,
-        "obj": max(night_count.values()),
+        "status": _status_from_obj(obj, N, D, A),
+        "obj": obj,
         "runtime": time.time() - start_time,
         "schedule": schedule,
         "iterations": iterations,

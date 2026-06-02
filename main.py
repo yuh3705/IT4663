@@ -1,49 +1,110 @@
-import os
 import glob
+import contextlib
+import io
+import os
+
 from utils.data_loader import read_input
 from utils.logger import ExperimentLogger
-from solvers.logic_exact import cp_solver, milp_solver
+from solvers.anls import anls_solver
+from solvers.branch_bound import branch_bound_solver
 from solvers.greedy import greedy_solver
 from solvers.local_search import hill_climbing_solver, tabu_search_solver
+from solvers.logic_exact import cp_solver, ilp_solver
+
+
+SOLVERS = [
+    ("CP-SAT", cp_solver),
+    ("ILP", ilp_solver),
+    ("Branch and Bound", branch_bound_solver),
+    ("Greedy", greedy_solver),
+    ("Hill Climbing", hill_climbing_solver),
+    ("Tabu Search", tabu_search_solver),
+    ("ANLS", anls_solver),
+]
+
+CUSTOM_SOLVERS = {
+    "Branch and Bound",
+    "Greedy",
+    "Hill Climbing",
+    "Tabu Search",
+    "ANLS",
+}
+
+
+def normalize_library_status(solver_name, status):
+    if solver_name != "ILP":
+        return status
+
+    status_map = {
+        0: "OPTIMAL",
+        1: "FEASIBLE",
+        2: "INFEASIBLE",
+        3: "UNBOUNDED",
+        4: "ABNORMAL",
+        6: "NOT SOLVED",
+    }
+    return status_map.get(status, status)
+
+
+def normalize_status(status, obj):
+    status_text = str(status).upper() if status is not None else ""
+    if status_text in {"OPTIMAL", "FEASIBLE", "NOT SOLVED"}:
+        return status_text
+
+    if obj is not None and status_text in {"OK", "TIME_LIMIT", "TIME_LIMIT_EXCEEDED"}:
+        return "FEASIBLE"
+
+    return "NOT SOLVED"
+
+
+def run_solver(solver_name, solver_module, N, D, A, B, F, time_limit):
+    try:
+        with contextlib.redirect_stdout(io.StringIO()):
+            result = solver_module.solve(N, D, A, B, F, time_limit=time_limit)
+        if result is None:
+            return {"status": "NO_RESULT", "obj": None, "runtime": 0}
+        if solver_name in CUSTOM_SOLVERS:
+            result["status"] = normalize_status(result.get("status"), result.get("obj"))
+        else:
+            result["status"] = normalize_library_status(solver_name, result.get("status"))
+        return result
+    except Exception as exc:
+        return {"status": "NOT SOLVED", "obj": None, "runtime": 0, "error": type(exc).__name__}
+
 
 def main():
-    logger = ExperimentLogger()
-    TIME_LIMIT = 60 # Giới hạn 60s cho mỗi test case
-    
-    # Dùng recursive=True để tìm tất cả file .txt trong mọi thư mục con của data/
-    test_files = glob.glob("data/stress/*.txt", recursive=True)
-    test_files.sort() # Sắp xếp để chạy từ easy đến stress
+    logger = ExperimentLogger("results/final_report.csv")
+    time_limit = 60
+
+    test_files = glob.glob("data/**/*.txt", recursive=True)
+    test_files.sort()
 
     for fpath in test_files:
-        # Lấy tên folder (easy/medium/...) và tên file
         category = os.path.basename(os.path.dirname(fpath))
         fname = os.path.basename(fpath)
-        
-        print(f"\n Running {category}/{fname}...")
-        
+        print(f"\nRunning {category}/{fname}...")
+
         data = read_input(fpath)
-        if not data: continue
+        if not data:
+            continue
+
         N, D, A, B, F = data
-        
-        # Chạy CP-SAT
-        # res_cp = cp_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        # Ghi log kèm theo category để dễ vẽ biểu đồ sau này
-        # logger.log(f"CP-SAT ({category})", fname, N, D, res_cp['status'], res_cp['obj'], res_cp['runtime'])
-        
-        # Chạy MILP
-        # res_milp = milp_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        # logger.log(f"MILP ({category})", fname, N, D, res_milp['status'], res_milp['obj'], res_milp['runtime'])
 
-        res_greedy = greedy_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        logger.log(f"Greedy ({category})", fname, N, D, res_greedy['status'], res_greedy['obj'], res_greedy['runtime'])
+        for solver_name, solver_module in SOLVERS:
+            print(f"  - {solver_name}")
+            result = run_solver(solver_name, solver_module, N, D, A, B, F, time_limit)
+            logger.log(
+                f"{solver_name} ({category})",
+                fname,
+                N,
+                D,
+                result.get("status"),
+                result.get("obj"),
+                result.get("runtime", 0),
+            )
 
-        res_hill = hill_climbing_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        logger.log(f"Hill Climbing ({category})", fname, N, D, res_hill['status'], res_hill['obj'], res_hill['runtime'])
+    logger.save()
 
-        res_tabu = tabu_search_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        logger.log(f"Tabu Search ({category})", fname, N, D, res_tabu['status'], res_tabu['obj'], res_tabu['runtime'])
-
-    logger.save("results/final_report.csv")
 
 if __name__ == "__main__":
     main()

@@ -65,6 +65,10 @@ def _objective(schedule, N, D):
     )
 
 
+def _status_from_obj(obj, N, D, A):
+    return "OPTIMAL" if obj == math.ceil(D * A / N) else "FEASIBLE"
+
+
 def _ordered_candidates(schedule, candidates, shift, d, N, D, F, night_count, work_count):
     if shift == NIGHT_SHIFT:
         return sorted(
@@ -157,7 +161,7 @@ def solve(N, D, A, B, F, time_limit=300, max_restarts=200, seed=42):
         return {"status": "NO_FEASIBLE_SOLUTION", "obj": None, "runtime": time.time() - start_time, "schedule": None}
 
     return {
-        "status": "GREEDY",
+        "status": _status_from_obj(best_obj, N, D, A),
         "obj": best_obj,
         "runtime": time.time() - start_time,
         "schedule": best_schedule,
