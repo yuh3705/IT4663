@@ -112,6 +112,20 @@ def _construct_initial_solution(N, D, A, F, rng, randomized, reverse_days=False)
     return schedule
 
 
+def _build_initial_feasible_solution(N, D, A, B, F, rng, start_time, time_limit, max_attempts=10):
+    for attempt in range(max_attempts):
+        if time.time() - start_time >= time_limit:
+            break
+        schedule = _construct_initial_solution(
+            N, D, A, F, rng,
+            randomized=attempt > 1,
+            reverse_days=attempt % 2 == 1,
+        )
+        if schedule is not None and _validate(schedule, N, D, A, B, F):
+            return schedule
+    return None
+
+
 def _validate(schedule, N, D, A, B, F):
     for i in range(1, N + 1):
         for d in range(1, D + 1):
@@ -186,17 +200,9 @@ def solve(N, D, A, B, F, time_limit=300, max_iterations=10000, tabu_tenure=25, s
     if A > B or 4 * A > N:
         return {"status": "INFEASIBLE", "obj": None, "runtime": time.time() - start_time, "schedule": None}
 
-    current = None
-    for attempt in range(100):
-        current = _construct_initial_solution(
-            N, D, A, F, rng,
-            randomized=attempt > 1,
-            reverse_days=attempt % 2 == 1,
-        )
-        if current is not None:
-            break
+    current = _build_initial_feasible_solution(N, D, A, B, F, rng, start_time, time_limit)
 
-    if current is None or not _validate(current, N, D, A, B, F):
+    if current is None:
         return {"status": "NO_FEASIBLE_SOLUTION", "obj": None, "runtime": time.time() - start_time, "schedule": None}
 
     best = current.copy()
