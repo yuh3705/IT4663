@@ -41,10 +41,10 @@ Branch and Bound (easy),test_6.txt,14,6,OPTIMAL,1.0,0.0006
 Greedy (easy),test_6.txt,14,6,OPTIMAL,1.0,0.0005
 Hill Climbing (easy),test_6.txt,14,6,OPTIMAL,1.0,0.0006
 Tabu Search (easy),test_6.txt,14,6,OPTIMAL,1.0,0.0005
-CP-SAT (easy),test_7.txt,5,4,INFEASIBLE,,0.0251
-ILP (easy),test_7.txt,5,4,INFEASIBLE/UNKNOWN,,0.0011
+CP-SAT (easy),test_7.txt,5,4,INFEASIBLE,,0.051
+ILP (easy),test_7.txt,5,4,INFEASIBLE/UNKNOWN,,0.0282
 Branch and Bound (easy),test_7.txt,5,4,NOT SOLVED,,0.0762
-Greedy (easy),test_7.txt,5,4,NOT SOLVED,,0.0078
+Greedy (easy),test_7.txt,5,4,NO_FEASIBLE_SOLUTION,,0.009
 Hill Climbing (easy),test_7.txt,5,4,NOT SOLVED,,0.008
 Tabu Search (easy),test_7.txt,5,4,NOT SOLVED,,0.0039
 CP-SAT (easy),test_8.txt,7,7,OPTIMAL,1.0,0.0248
@@ -207,59 +207,59 @@ CP-SAT (stress),test_1.txt,318,187,OPTIMAL,28.0,20.9873
 ILP (stress),test_1.txt,318,187,OPTIMAL,28.0,241.9057
 Branch and Bound (stress),test_1.txt,318,187,NOT SOLVED,,4.465
 Greedy (stress),test_1.txt,318,187,OPTIMAL,28.0,7.4953
-Hill Climbing (stress),test_1.txt,318,187,OPTIMAL,28.0,8.7787
-Tabu Search (stress),test_1.txt,318,187,OPTIMAL,28.0,7.2888
+Hill Climbing (stress),test_1.txt,318,187,OPTIMAL,28.0,162.0674
+Tabu Search (stress),test_1.txt,318,187,FEASIBLE,29.0,1210.4471
 CP-SAT (stress),test_10.txt,334,191,OPTIMAL,29.0,44.0543
 ILP (stress),test_10.txt,334,191,OPTIMAL,29.0,356.1401
 Branch and Bound (stress),test_10.txt,334,191,NOT SOLVED,,13.4045
 Greedy (stress),test_10.txt,334,191,OPTIMAL,29.0,9.4609
-Hill Climbing (stress),test_10.txt,334,191,OPTIMAL,29.0,21.8484
-Tabu Search (stress),test_10.txt,334,191,OPTIMAL,29.0,21.5316
+Hill Climbing (stress),test_10.txt,334,191,NO_FEASIBLE_SOLUTION,,1202.1414
+Tabu Search (stress),test_10.txt,334,191,NO_FEASIBLE_SOLUTION,,1202.2557
 CP-SAT (stress),test_2.txt,341,105,OPTIMAL,16.0,25.4246
 ILP (stress),test_2.txt,341,105,OPTIMAL,16.0,51.481
 Branch and Bound (stress),test_2.txt,341,105,NOT SOLVED,,1.3607
 Greedy (stress),test_2.txt,341,105,OPTIMAL,16.0,4.2353
-Hill Climbing (stress),test_2.txt,341,105,OPTIMAL,16.0,5.7671
-Tabu Search (stress),test_2.txt,341,105,OPTIMAL,16.0,4.0621
+Hill Climbing (stress),test_2.txt,341,105,NO_FEASIBLE_SOLUTION,,1209.6547
+Tabu Search (stress),test_2.txt,341,105,NO_FEASIBLE_SOLUTION,,1200.9061
 CP-SAT (stress),test_3.txt,446,167,OPTIMAL,25.0,46.6109
 ILP (stress),test_3.txt,446,167,OPTIMAL,25.0,400.4266
 Branch and Bound (stress),test_3.txt,446,167,OPTIMAL,25.0,9.1117
 Greedy (stress),test_3.txt,446,167,OPTIMAL,25.0,9.1911
-Hill Climbing (stress),test_3.txt,446,167,OPTIMAL,25.0,10.831
-Tabu Search (stress),test_3.txt,446,167,OPTIMAL,25.0,9.437
+Hill Climbing (stress),test_3.txt,446,167,OPTIMAL,25.0,444.9389
+Tabu Search (stress),test_3.txt,446,167,FEASIBLE,26.0,1202.8689
 CP-SAT (stress),test_4.txt,417,105,OPTIMAL,16.0,17.1343
 ILP (stress),test_4.txt,417,105,OPTIMAL,16.0,197.7132
 Branch and Bound (stress),test_4.txt,417,105,OPTIMAL,16.0,8.2906
 Greedy (stress),test_4.txt,417,105,OPTIMAL,16.0,7.9165
-Hill Climbing (stress),test_4.txt,417,105,OPTIMAL,16.0,11.4339
-Tabu Search (stress),test_4.txt,417,105,OPTIMAL,16.0,6.9108
+Hill Climbing (stress),test_4.txt,417,105,OPTIMAL,16.0,163.4454
+Tabu Search (stress),test_4.txt,417,105,FEASIBLE,17.0,1201.704
 CP-SAT (stress),test_5.txt,425,150,OPTIMAL,23.0,22.7939
 ILP (stress),test_5.txt,425,150,OPTIMAL,23.0,307.8432
 Branch and Bound (stress),test_5.txt,425,150,NOT SOLVED,,0.5422
 Greedy (stress),test_5.txt,425,150,OPTIMAL,23.0,3.9547
-Hill Climbing (stress),test_5.txt,425,150,OPTIMAL,23.0,7.5731
-Tabu Search (stress),test_5.txt,425,150,OPTIMAL,23.0,4.0749
+Hill Climbing (stress),test_5.txt,425,150,NO_FEASIBLE_SOLUTION,,1206.0144
+Tabu Search (stress),test_5.txt,425,150,NO_FEASIBLE_SOLUTION,,1200.4059
 CP-SAT (stress),test_6.txt,352,134,OPTIMAL,20.0,15.742
 ILP (stress),test_6.txt,352,134,OPTIMAL,20.0,219.7416
 Branch and Bound (stress),test_6.txt,352,134,OPTIMAL,20.0,3.9766
 Greedy (stress),test_6.txt,352,134,OPTIMAL,20.0,3.9318
-Hill Climbing (stress),test_6.txt,352,134,OPTIMAL,20.0,5.1601
-Tabu Search (stress),test_6.txt,352,134,OPTIMAL,20.0,4.06
+Hill Climbing (stress),test_6.txt,352,134,OPTIMAL,20.0,122.1973
+Tabu Search (stress),test_6.txt,352,134,FEASIBLE,21.0,1201.6814
 CP-SAT (stress),test_7.txt,483,147,OPTIMAL,22.0,31.2447
 ILP (stress),test_7.txt,483,147,OPTIMAL,22.0,416.1639
 Branch and Bound (stress),test_7.txt,483,147,OPTIMAL,22.0,8.5986
 Greedy (stress),test_7.txt,483,147,OPTIMAL,22.0,8.8387
-Hill Climbing (stress),test_7.txt,483,147,OPTIMAL,22.0,11.253
-Tabu Search (stress),test_7.txt,483,147,OPTIMAL,22.0,8.8808
+Hill Climbing (stress),test_7.txt,483,147,OPTIMAL,22.0,581.2515
+Tabu Search (stress),test_7.txt,483,147,FEASIBLE,23.0,1202.2261
 CP-SAT (stress),test_8.txt,403,194,OPTIMAL,29.0,18.3995
 ILP (stress),test_8.txt,403,194,OPTIMAL,29.0,471.9366
 Branch and Bound (stress),test_8.txt,403,194,OPTIMAL,29.0,22.955
 Greedy (stress),test_8.txt,403,194,OPTIMAL,29.0,21.9694
-Hill Climbing (stress),test_8.txt,403,194,OPTIMAL,29.0,28.1217
-Tabu Search (stress),test_8.txt,403,194,OPTIMAL,29.0,22.7964
+Hill Climbing (stress),test_8.txt,403,194,NO_FEASIBLE_SOLUTION,,1219.4008
+Tabu Search (stress),test_8.txt,403,194,NO_FEASIBLE_SOLUTION,,1202.0091
 CP-SAT (stress),test_9.txt,485,171,OPTIMAL,26.0,24.0336
 ILP (stress),test_9.txt,485,171,OPTIMAL,26.0,559.6428
 Branch and Bound (stress),test_9.txt,485,171,OPTIMAL,26.0,25.1536
 Greedy (stress),test_9.txt,485,171,OPTIMAL,26.0,16.6129
-Hill Climbing (stress),test_9.txt,485,171,OPTIMAL,26.0,13.2304
-Tabu Search (stress),test_9.txt,485,171,OPTIMAL,26.0,11.5928
+Hill Climbing (stress),test_9.txt,485,171,NO_FEASIBLE_SOLUTION,,1215.8497
+Tabu Search (stress),test_9.txt,485,171,FEASIBLE,27.0,1205.9325

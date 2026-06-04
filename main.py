@@ -9,6 +9,7 @@ from solvers.logic_exact import cp_solver, ilp_solver
 from solvers.greedy import greedy_solver
 from solvers.local_search import hill_climbing_solver, tabu_search_solver
 from solvers.logic_exact import cp_solver, ilp_solver
+from solvers.branch_bound import branch_bound_solver
 
 
 SOLVERS = [
@@ -18,7 +19,6 @@ SOLVERS = [
     ("Greedy", greedy_solver),
     ("Hill Climbing", hill_climbing_solver),
     ("Tabu Search", tabu_search_solver),
-    ("ANLS", anls_solver),
 ]
 
 CUSTOM_SOLVERS = {
@@ -76,7 +76,7 @@ def main():
     TIME_LIMIT = 1200 # Giới hạn 1000s cho mỗi test case
     
     # Dùng recursive=True để tìm tất cả file .txt trong mọi thư mục con của data/
-    test_files = glob.glob("data/stress/*.txt", recursive=True)
+    test_files = glob.glob("data/easy/test_7.txt", recursive=True)
     # test_files = ["/Users/binhminh/Desktop/IT4663 PRJ/IT4663/data/stress/test_9.txt", "/Users/binhminh/Desktop/IT4663 PRJ/IT4663/data/stress/test_8.txt"]
     test_files.sort() # Sắp xếp để chạy từ easy đến stress
 
@@ -92,15 +92,15 @@ def main():
         N, D, A, B, F = data
         
         # Chạy CP-SAT
-        # res_cp = cp_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        # logger.log(f"CP-SAT ({category})", fname, N, D, res_cp['status'], res_cp['obj'], res_cp['runtime'])
+        res_cp = cp_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
+        logger.log(f"CP-SAT ({category})", fname, N, D, res_cp['status'], res_cp['obj'], res_cp['runtime'])
         
         # Chạy ILP
         res_ilp = ilp_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
         logger.log(f"ILP ({category})", fname, N, D, res_ilp['status'], res_ilp['obj'], res_ilp['runtime'])
 
-        # res_greedy = greedy_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        # logger.log(f"Greedy ({category})", fname, N, D, res_greedy['status'], res_greedy['obj'], res_greedy['runtime'])
+        res_greedy = greedy_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
+        logger.log(f"Greedy ({category})", fname, N, D, res_greedy['status'], res_greedy['obj'], res_greedy['runtime'])
 
         # res_hill = hill_climbing_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
         # logger.log(f"Hill Climbing ({category})", fname, N, D, res_hill['status'], res_hill['obj'], res_hill['runtime'])
