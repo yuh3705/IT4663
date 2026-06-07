@@ -153,14 +153,20 @@ def solve(N, D, A, B, F, time_limit=300):
     optimal_reached = False
     nodes = 0
 
+    def hit_time_limit():
+        nonlocal timed_out
+        if time.time() - start_time >= time_limit:
+            timed_out = True
+            return True
+        return False
+
     def search(task_idx):
         nonlocal best_obj, best_schedule, timed_out, optimal_reached, nodes
 
         if optimal_reached:
             return
 
-        if time.time() - start_time >= time_limit:
-            timed_out = True
+        if hit_time_limit():
             return
 
         nodes += 1
@@ -198,7 +204,7 @@ def solve(N, D, A, B, F, time_limit=300):
         chosen = []
 
         def choose(start, remaining):
-            if timed_out:
+            if timed_out or hit_time_limit() or optimal_reached:
                 return
             if remaining == 0:
                 for i in chosen:
@@ -220,6 +226,8 @@ def solve(N, D, A, B, F, time_limit=300):
                 return
 
             for idx in range(start, len(candidates)):
+                if timed_out or hit_time_limit() or optimal_reached:
+                    return
                 i = candidates[idx]
                 chosen.append(i)
                 choose(idx + 1, remaining - 1)
