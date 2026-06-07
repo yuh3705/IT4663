@@ -73,10 +73,10 @@ def run_solver(solver_name, solver_module, N, D, A, B, F, time_limit):
 
 def main():
     logger = ExperimentLogger()
-    TIME_LIMIT = 1200 # Giới hạn 1000s cho mỗi test case
+    TIME_LIMIT = 300 
     
     # Dùng recursive=True để tìm tất cả file .txt trong mọi thư mục con của data/
-    test_files = glob.glob("data/easy/test_7.txt", recursive=True)
+    test_files = glob.glob("data/edge/*.txt", recursive=True)
     # test_files = ["/Users/binhminh/Desktop/IT4663 PRJ/IT4663/data/stress/test_9.txt", "/Users/binhminh/Desktop/IT4663 PRJ/IT4663/data/stress/test_8.txt"]
     test_files.sort() # Sắp xếp để chạy từ easy đến stress
 
@@ -91,16 +91,20 @@ def main():
 
         N, D, A, B, F = data
         
-        # Chạy CP-SAT
-        res_cp = cp_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        logger.log(f"CP-SAT ({category})", fname, N, D, res_cp['status'], res_cp['obj'], res_cp['runtime'])
+        # # Chạy CP-SAT
+        # res_cp = cp_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
+        # logger.log(f"CP-SAT ({category})", fname, N, D, res_cp['status'], res_cp['obj'], res_cp['runtime'])
         
-        # Chạy ILP
-        res_ilp = ilp_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        logger.log(f"ILP ({category})", fname, N, D, res_ilp['status'], res_ilp['obj'], res_ilp['runtime'])
+        # # Chạy ILP
+        # res_ilp = ilp_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
+        # logger.log(f"ILP ({category})", fname, N, D, res_ilp['status'], res_ilp['obj'], res_ilp['runtime'])
 
-        res_greedy = greedy_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
-        logger.log(f"Greedy ({category})", fname, N, D, res_greedy['status'], res_greedy['obj'], res_greedy['runtime'])
+        # res_greedy = greedy_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
+        # logger.log(f"Greedy ({category})", fname, N, D, res_greedy['status'], res_greedy['obj'], res_greedy['runtime'])
+
+        #branch_bound
+        res_bb = branch_bound_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
+        logger.log(f"Branch and Bound ({category})", fname, N, D, res_bb['status'], res_bb['obj'], res_bb['runtime'])
 
         # res_hill = hill_climbing_solver.solve(N, D, A, B, F, time_limit=TIME_LIMIT)
         # logger.log(f"Hill Climbing ({category})", fname, N, D, res_hill['status'], res_hill['obj'], res_hill['runtime'])

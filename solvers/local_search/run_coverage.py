@@ -146,14 +146,14 @@ def _plot_objective_history(df, output_path, test_file, results):
 
 def main():
     parser = argparse.ArgumentParser(description="Plot objective value over local-search iterations.")
-    parser.add_argument("--case", default="../../data/stress/test_2.txt", help="Path to a data/*.txt test case")
+    parser.add_argument("--case", default="../../data/edge/repair_pressure_3.txt", help="Path to a data/*.txt test case")
     parser.add_argument(
         "--solver",
         choices=["all", "hill", "tabu"],
         default="all",
         help="Solver to plot. Use 'all' to compare Hill Climbing and Tabu Search.",
     )
-    parser.add_argument("--time-limit", type=float, default=1800)
+    parser.add_argument("--time-limit", type=float, default=600)
     parser.add_argument("--max-iterations", type=int, default=20000)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--output", default="results/convergence_plot.png")

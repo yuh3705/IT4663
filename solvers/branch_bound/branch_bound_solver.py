@@ -5,8 +5,6 @@ import time
 
 SHIFT_COUNT = 4
 NIGHT_SHIFT = 4
-MAX_EXACT_N = 40
-MAX_EXACT_A = 5
 
 
 def _empty_schedule(N, D):
@@ -68,48 +66,6 @@ def _future_capacity_after_night(schedule, i, d, N, D, F):
     return N - unavailable
 
 
-def _initial_solution(N, D, A, B, F):
-    if A > B or 4 * A > N:
-        return None
-
-    schedule = _empty_schedule(N, D)
-    night_count = {i: 0 for i in range(1, N + 1)}
-    work_count = {i: 0 for i in range(1, N + 1)}
-
-    for d in range(1, D + 1):
-        for shift in [NIGHT_SHIFT, 1, 2, 3]:
-            candidates = [
-                i for i in range(1, N + 1)
-                if _can_work(schedule, i, d, shift, D, F)
-            ]
-
-            if shift == NIGHT_SHIFT:
-                candidates.sort(
-                    key=lambda i: (
-                        night_count[i],
-                        work_count[i],
-                        -_future_capacity_after_night(schedule, i, d, N, D, F),
-                        len(F.get(i, [])),
-                        i,
-                    )
-                )
-            else:
-                candidates.sort(key=lambda i: (work_count[i], night_count[i], len(F.get(i, [])), i))
-
-            if len(candidates) < A:
-                return None
-
-            for i in candidates[:A]:
-                schedule[i, d] = shift
-                work_count[i] += 1
-                if shift == NIGHT_SHIFT:
-                    night_count[i] += 1
-
-    if not _validate(schedule, N, D, A, B, F):
-        return None
-    return schedule
-
-
 def _lower_bound(night_count, remaining_night_slots, N):
     if not night_count:
         return 0
@@ -138,10 +94,6 @@ def _remaining_night_slots(tasks, task_idx, A):
 
 def _global_lower_bound(N, D, A):
     return math.ceil(D * A / N)
-
-
-def _can_run_exact_branch_bound(N, A):
-    return N <= MAX_EXACT_N and A <= MAX_EXACT_A
 
 
 def _ordered_candidates(schedule, candidates, shift, d, D, F, night_count, work_count):
@@ -189,37 +141,23 @@ def solve(N, D, A, B, F, time_limit=300):
     if A > B or 4 * A > N:
         return {"status": "INFEASIBLE", "obj": None, "runtime": time.time() - start_time, "schedule": None}
 
-    best_schedule = _initial_solution(N, D, A, B, F)
-    best_obj = _objective(best_schedule, N, D) if best_schedule is not None else D + 1
+    best_schedule = None
+    best_obj = math.inf
     global_lb = _global_lower_bound(N, D, A)
-
-    if best_schedule is not None and best_obj == global_lb:
-        return {
-            "status": "OPTIMAL",
-            "obj": best_obj,
-            "runtime": time.time() - start_time,
-            "schedule": best_schedule,
-            "nodes": 0,
-        }
-
-    if not _can_run_exact_branch_bound(N, A):
-        return {
-            "status": "FEASIBLE" if best_schedule is not None else "NO_FEASIBLE_SOLUTION",
-            "obj": best_obj if best_schedule is not None else None,
-            "runtime": time.time() - start_time,
-            "schedule": best_schedule,
-            "nodes": 0,
-        }
 
     schedule = _empty_schedule(N, D)
     night_count = {i: 0 for i in range(1, N + 1)}
     work_count = {i: 0 for i in range(1, N + 1)}
     tasks = _build_tasks(N, D, A, F)
     timed_out = False
+    optimal_reached = False
     nodes = 0
 
     def search(task_idx):
-        nonlocal best_obj, best_schedule, timed_out, nodes
+        nonlocal best_obj, best_schedule, timed_out, optimal_reached, nodes
+
+        if optimal_reached:
+            return
 
         if time.time() - start_time >= time_limit:
             timed_out = True
@@ -237,6 +175,8 @@ def solve(N, D, A, B, F, time_limit=300):
             if obj < best_obj:
                 best_obj = obj
                 best_schedule = schedule.copy()
+                if best_obj == global_lb:
+                    optimal_reached = True
             return
 
         d, shift = tasks[task_idx]
@@ -322,11 +262,11 @@ def main():
     N, D, A, B, F = data
     result = solve(N, D, A, B, F)
     schedule = result["schedule"]
-    if schedule is None:
-        print("NO_SOLUTION")
-        return
     if result["status"] == "TIMEOUT":
         print("TIME_LIMIT_EXCEEDED")
+        return
+    if schedule is None:
+        print("NO_SOLUTION")
         return
 
     for i in range(1, N + 1):
