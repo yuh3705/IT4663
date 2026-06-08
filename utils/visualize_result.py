@@ -38,7 +38,7 @@ sns.lineplot(
 )
 
 # Tùy chỉnh
-plt.title('Performance Comparison: CP-SAT vs MILP', fontsize=14, fontweight='bold')
+plt.title('Performance Comparison: CP-SAT vs SCIP', fontsize=14, fontweight='bold')
 plt.xlabel('Dataset Scale', fontsize=12)
 plt.ylabel('Average Runtime (seconds)', fontsize=12)
 plt.yscale('log') # Giữ thang log để thấy rõ sự khác biệt ở stress test

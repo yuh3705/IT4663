@@ -7,6 +7,7 @@ class ExperimentLogger:
         self.results = []
 
     def log(self, solver_name, dataset, N, D, status, obj, runtime):
+        runtime_value = "" if runtime is None else round(runtime, 4)
         self.results.append({
             "Thuật toán" : solver_name,
             "Bộ dữ liệu" : dataset,
@@ -14,7 +15,7 @@ class ExperimentLogger:
             "Số ngày" : D,
             "Trạng thái" : status,
             "Giá trị hàm mục tiêu" : obj,
-            "Thời gian chạy(s)" : round(runtime, 4)
+            "Thời gian chạy(s)" : runtime_value
             # "Gap time" : gap_time
         })
 
@@ -43,10 +44,10 @@ class ExperimentLogger:
                 # Nếu trạng thái đã là chuỗi chữ sẵn (như 'OPTIMAL', 'FEASIBLE') thì bỏ qua không map lại nữa
                 if isinstance(new_res['Trạng thái'], str):
                     pass 
-                # Nếu là số 0 (theo chuẩn ILP của bạn) thì chuyển về OPTIMAL
+                # Nếu là số 0 (theo chuẩn SCIP/pywraplp) thì chuyển về OPTIMAL
                 elif new_res['Trạng thái'] == 0:
                     new_res['Trạng thái'] = 'OPTIMAL'
-                # Nếu là số 1 (theo chuẩn ILP của bạn) thì chuyển về FEASIBLE
+                # Nếu là số 1 (theo chuẩn SCIP/pywraplp) thì chuyển về FEASIBLE
                 elif new_res['Trạng thái'] == 1:
                     new_res['Trạng thái'] = 'FEASIBLE'
                 # Các trường hợp số khác hoặc lỗi

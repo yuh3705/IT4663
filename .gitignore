@@ -3,19 +3,41 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.pdb
 
 # Operating System Files
 .DS_Store
 .DS_Store?
 ._*
 Thumbs.db
+desktop.ini
 
 # Virtual Environment
 venv/
 .venv/
 env/
+.env/
 
 # IDE files
 .vscode/
 .idea/
 
+# Python tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Packaging/build artifacts
+build/
+dist/
+*.egg-info/
+
+# Runtime logs and temporary files
+*.log
+*.tmp
+tempCodeRunnerFile.py
+
+# Local notebooks/checkpoints
+.ipynb_checkpoints/

@@ -1,303 +1,303 @@
 Thuật toán,Bộ dữ liệu,Số nhân viên,Số ngày,Trạng thái,Giá trị hàm mục tiêu,Thời gian chạy(s)
 CP-SAT (easy),test_1.txt,10,6,OPTIMAL,1.0,0.0305
-ILP (easy),test_1.txt,10,6,OPTIMAL,1.0,0.0059
-Branch and Bound (easy),test_1.txt,10,6,OPTIMAL,1.0,0.0003
+SCIP (easy),test_1.txt,10,6,OPTIMAL,1.0,0.0059
+Branch and Bound (easy),test_1.txt,10,6,OPTIMAL,1.0,0.0007
 Greedy (easy),test_1.txt,10,6,OPTIMAL,1.0,0.0004
 Hill Climbing (easy),test_1.txt,10,6,OPTIMAL,1.0,0.0002
 Tabu Search (easy),test_1.txt,10,6,OPTIMAL,1.0,0.0002
 CP-SAT (easy),test_10.txt,7,6,OPTIMAL,1.0,0.023
-ILP (easy),test_10.txt,7,6,OPTIMAL,1.0,0.0036
-Branch and Bound (easy),test_10.txt,7,6,OPTIMAL,1.0,0.0002
+SCIP (easy),test_10.txt,7,6,OPTIMAL,1.0,0.0036
+Branch and Bound (easy),test_10.txt,7,6,OPTIMAL,1.0,0.0004
 Greedy (easy),test_10.txt,7,6,OPTIMAL,1.0,0.0004
 Hill Climbing (easy),test_10.txt,7,6,OPTIMAL,1.0,0.0003
 Tabu Search (easy),test_10.txt,7,6,OPTIMAL,1.0,0.001
 CP-SAT (easy),test_2.txt,18,7,OPTIMAL,1.0,0.0353
-ILP (easy),test_2.txt,18,7,OPTIMAL,1.0,0.0098
+SCIP (easy),test_2.txt,18,7,OPTIMAL,1.0,0.0098
 Branch and Bound (easy),test_2.txt,18,7,OPTIMAL,1.0,0.001
 Greedy (easy),test_2.txt,18,7,OPTIMAL,1.0,0.0008
 Hill Climbing (easy),test_2.txt,18,7,OPTIMAL,1.0,0.0005
 Tabu Search (easy),test_2.txt,18,7,OPTIMAL,1.0,0.0019
 CP-SAT (easy),test_3.txt,17,2,OPTIMAL,1.0,0.026
-ILP (easy),test_3.txt,17,2,OPTIMAL,1.0,0.0048
+SCIP (easy),test_3.txt,17,2,OPTIMAL,1.0,0.0048
 Branch and Bound (easy),test_3.txt,17,2,OPTIMAL,1.0,0.0002
 Greedy (easy),test_3.txt,17,2,OPTIMAL,1.0,0.0003
 Hill Climbing (easy),test_3.txt,17,2,OPTIMAL,1.0,0.0001
 Tabu Search (easy),test_3.txt,17,2,OPTIMAL,1.0,0.0001
 CP-SAT (easy),test_4.txt,17,7,OPTIMAL,1.0,0.0451
-ILP (easy),test_4.txt,17,7,OPTIMAL,1.0,0.0098
-Branch and Bound (easy),test_4.txt,17,7,OPTIMAL,1.0,0.0005
+SCIP (easy),test_4.txt,17,7,OPTIMAL,1.0,0.0098
+Branch and Bound (easy),test_4.txt,17,7,OPTIMAL,1.0,0.0016
 Greedy (easy),test_4.txt,17,7,OPTIMAL,1.0,0.0007
 Hill Climbing (easy),test_4.txt,17,7,OPTIMAL,1.0,0.0007
 Tabu Search (easy),test_4.txt,17,7,OPTIMAL,1.0,0.006
 CP-SAT (easy),test_5.txt,14,2,OPTIMAL,1.0,0.0209
-ILP (easy),test_5.txt,14,2,OPTIMAL,1.0,0.003
-Branch and Bound (easy),test_5.txt,14,2,OPTIMAL,1.0,0.0001
+SCIP (easy),test_5.txt,14,2,OPTIMAL,1.0,0.003
+Branch and Bound (easy),test_5.txt,14,2,OPTIMAL,1.0,0.0002
 Greedy (easy),test_5.txt,14,2,OPTIMAL,1.0,0.0002
 Hill Climbing (easy),test_5.txt,14,2,OPTIMAL,1.0,0.0001
 Tabu Search (easy),test_5.txt,14,2,OPTIMAL,1.0,0.0001
 CP-SAT (easy),test_6.txt,14,6,OPTIMAL,1.0,0.0394
-ILP (easy),test_6.txt,14,6,OPTIMAL,1.0,0.0076
-Branch and Bound (easy),test_6.txt,14,6,OPTIMAL,1.0,0.0006
+SCIP (easy),test_6.txt,14,6,OPTIMAL,1.0,0.0076
+Branch and Bound (easy),test_6.txt,14,6,OPTIMAL,1.0,0.0008
 Greedy (easy),test_6.txt,14,6,OPTIMAL,1.0,0.0005
 Hill Climbing (easy),test_6.txt,14,6,OPTIMAL,1.0,0.0005
 Tabu Search (easy),test_6.txt,14,6,OPTIMAL,1.0,0.0057
 CP-SAT (easy),test_7.txt,5,4,INFEASIBLE,,0.0097
-ILP (easy),test_7.txt,5,4,INFEASIBLE/UNKNOWN,,0.0023
-Branch and Bound (easy),test_7.txt,5,4,NOT SOLVED,,0.0762
+SCIP (easy),test_7.txt,5,4,INFEASIBLE/UNKNOWN,,0.0023
+Branch and Bound (easy),test_7.txt,5,4,NO_FEASIBLE_SOLUTION,,0.0865
 Greedy (easy),test_7.txt,5,4,NO_FEASIBLE_SOLUTION,,0.0091
 Hill Climbing (easy),test_7.txt,5,4,NO_FEASIBLE_SOLUTION,,27.6193
 Tabu Search (easy),test_7.txt,5,4,NO_FEASIBLE_SOLUTION,,21.9009
 CP-SAT (easy),test_8.txt,7,7,OPTIMAL,1.0,0.037
-ILP (easy),test_8.txt,7,7,OPTIMAL,1.0,0.0053
-Branch and Bound (easy),test_8.txt,7,7,OPTIMAL,1.0,0.0002
+SCIP (easy),test_8.txt,7,7,OPTIMAL,1.0,0.0053
+Branch and Bound (easy),test_8.txt,7,7,OPTIMAL,1.0,0.0004
 Greedy (easy),test_8.txt,7,7,OPTIMAL,1.0,0.0003
 Hill Climbing (easy),test_8.txt,7,7,OPTIMAL,1.0,0.0002
 Tabu Search (easy),test_8.txt,7,7,OPTIMAL,1.0,0.0011
 CP-SAT (easy),test_9.txt,7,3,OPTIMAL,1.0,0.0207
-ILP (easy),test_9.txt,7,3,OPTIMAL,1.0,0.0026
-Branch and Bound (easy),test_9.txt,7,3,OPTIMAL,1.0,0.0002
+SCIP (easy),test_9.txt,7,3,OPTIMAL,1.0,0.0026
+Branch and Bound (easy),test_9.txt,7,3,OPTIMAL,1.0,0.0003
 Greedy (easy),test_9.txt,7,3,OPTIMAL,1.0,0.0002
 Hill Climbing (easy),test_9.txt,7,3,OPTIMAL,1.0,0.0001
 Tabu Search (easy),test_9.txt,7,3,OPTIMAL,1.0,0.0001
 CP-SAT (hard),test_1.txt,113,42,OPTIMAL,6.0,1.9282
-ILP (hard),test_1.txt,113,42,OPTIMAL,6.0,2.6875
-Branch and Bound (hard),test_1.txt,113,42,OPTIMAL,6.0,0.0938
+SCIP (hard),test_1.txt,113,42,OPTIMAL,6.0,2.6875
+Branch and Bound (hard),test_1.txt,113,42,RECURSION_ERROR,,
 Greedy (hard),test_1.txt,113,42,OPTIMAL,6.0,0.1932
 Hill Climbing (hard),test_1.txt,113,42,OPTIMAL,6.0,1.0074
 Tabu Search (hard),test_1.txt,113,42,OPTIMAL,6.0,10.9803
 CP-SAT (hard),test_10.txt,272,49,OPTIMAL,8.0,6.412
-ILP (hard),test_10.txt,272,49,OPTIMAL,8.0,11.5397
-Branch and Bound (hard),test_10.txt,272,49,OPTIMAL,8.0,0.5016
+SCIP (hard),test_10.txt,272,49,OPTIMAL,8.0,11.5397
+Branch and Bound (hard),test_10.txt,272,49,RECURSION_ERROR,,
 Greedy (hard),test_10.txt,272,49,OPTIMAL,8.0,0.5934
 Hill Climbing (hard),test_10.txt,272,49,OPTIMAL,8.0,9.0526
 Tabu Search (hard),test_10.txt,272,49,OPTIMAL,8.0,26.6834
 CP-SAT (hard),test_2.txt,294,90,OPTIMAL,14.0,11.453
-ILP (hard),test_2.txt,294,90,OPTIMAL,14.0,61.8937
-Branch and Bound (hard),test_2.txt,294,90,OPTIMAL,14.0,2.8841
+SCIP (hard),test_2.txt,294,90,OPTIMAL,14.0,61.8937
+Branch and Bound (hard),test_2.txt,294,90,RECURSION_ERROR,,
 Greedy (hard),test_2.txt,294,90,OPTIMAL,14.0,2.9568
 Hill Climbing (hard),test_2.txt,294,90,OPTIMAL,14.0,41.8472
 Tabu Search (hard),test_2.txt,294,90,FEASIBLE,15.0,120.2401
 CP-SAT (hard),test_3.txt,128,35,OPTIMAL,6.0,1.7184
-ILP (hard),test_3.txt,128,35,OPTIMAL,6.0,1.456
-Branch and Bound (hard),test_3.txt,128,35,OPTIMAL,6.0,0.2294
+SCIP (hard),test_3.txt,128,35,OPTIMAL,6.0,1.456
+Branch and Bound (hard),test_3.txt,128,35,RECURSION_ERROR,,
 Greedy (hard),test_3.txt,128,35,OPTIMAL,6.0,0.1723
 Hill Climbing (hard),test_3.txt,128,35,OPTIMAL,6.0,0.9459
 Tabu Search (hard),test_3.txt,128,35,OPTIMAL,6.0,2.9251
 CP-SAT (hard),test_4.txt,237,62,OPTIMAL,10.0,7.0101
-ILP (hard),test_4.txt,237,62,OPTIMAL,10.0,17.0217
-Branch and Bound (hard),test_4.txt,237,62,OPTIMAL,10.0,0.5657
+SCIP (hard),test_4.txt,237,62,OPTIMAL,10.0,17.0217
+Branch and Bound (hard),test_4.txt,237,62,RECURSION_ERROR,,
 Greedy (hard),test_4.txt,237,62,OPTIMAL,10.0,1.1223
 Hill Climbing (hard),test_4.txt,237,62,OPTIMAL,10.0,8.1357
 Tabu Search (hard),test_4.txt,237,62,OPTIMAL,10.0,24.7116
 CP-SAT (hard),test_5.txt,268,88,OPTIMAL,14.0,12.2571
-ILP (hard),test_5.txt,268,88,OPTIMAL,14.0,40.4767
-Branch and Bound (hard),test_5.txt,268,88,OPTIMAL,14.0,2.2042
+SCIP (hard),test_5.txt,268,88,OPTIMAL,14.0,40.4767
+Branch and Bound (hard),test_5.txt,268,88,RECURSION_ERROR,,
 Greedy (hard),test_5.txt,268,88,OPTIMAL,14.0,2.232
 Hill Climbing (hard),test_5.txt,268,88,OPTIMAL,14.0,20.8586
 Tabu Search (hard),test_5.txt,268,88,OPTIMAL,14.0,65.2961
 CP-SAT (hard),test_6.txt,105,83,OPTIMAL,12.0,3.2969
-ILP (hard),test_6.txt,105,83,OPTIMAL,12.0,5.7073
-Branch and Bound (hard),test_6.txt,105,83,OPTIMAL,12.0,0.4358
+SCIP (hard),test_6.txt,105,83,OPTIMAL,12.0,5.7073
+Branch and Bound (hard),test_6.txt,105,83,RECURSION_ERROR,,
 Greedy (hard),test_6.txt,105,83,OPTIMAL,12.0,0.3653
 Hill Climbing (hard),test_6.txt,105,83,OPTIMAL,12.0,2.8786
 Tabu Search (hard),test_6.txt,105,83,OPTIMAL,12.0,15.8152
 CP-SAT (hard),test_7.txt,143,48,OPTIMAL,8.0,2.7242
-ILP (hard),test_7.txt,143,48,OPTIMAL,8.0,3.5876
-Branch and Bound (hard),test_7.txt,143,48,OPTIMAL,8.0,0.3251
+SCIP (hard),test_7.txt,143,48,OPTIMAL,8.0,3.5876
+Branch and Bound (hard),test_7.txt,143,48,RECURSION_ERROR,,
 Greedy (hard),test_7.txt,143,48,OPTIMAL,8.0,0.2753
 Hill Climbing (hard),test_7.txt,143,48,OPTIMAL,8.0,1.0853
 Tabu Search (hard),test_7.txt,143,48,OPTIMAL,8.0,4.1225
 CP-SAT (hard),test_8.txt,254,86,OPTIMAL,13.0,11.228
-ILP (hard),test_8.txt,254,86,OPTIMAL,13.0,47.7664
-Branch and Bound (hard),test_8.txt,254,86,OPTIMAL,13.0,2.2487
+SCIP (hard),test_8.txt,254,86,OPTIMAL,13.0,47.7664
+Branch and Bound (hard),test_8.txt,254,86,RECURSION_ERROR,,
 Greedy (hard),test_8.txt,254,86,OPTIMAL,13.0,1.8807
 Hill Climbing (hard),test_8.txt,254,86,OPTIMAL,13.0,12.1767
 Tabu Search (hard),test_8.txt,254,86,FEASIBLE,14.0,120.009
 CP-SAT (hard),test_9.txt,116,76,OPTIMAL,12.0,1.5394
-ILP (hard),test_9.txt,116,76,OPTIMAL,12.0,2.8478
-Branch and Bound (hard),test_9.txt,116,76,OPTIMAL,12.0,0.1903
+SCIP (hard),test_9.txt,116,76,OPTIMAL,12.0,2.8478
+Branch and Bound (hard),test_9.txt,116,76,RECURSION_ERROR,,
 Greedy (hard),test_9.txt,116,76,OPTIMAL,12.0,0.1832
 Hill Climbing (hard),test_9.txt,116,76,OPTIMAL,12.0,0.5301
 Tabu Search (hard),test_9.txt,116,76,OPTIMAL,12.0,1.9656
 CP-SAT (hustack),case_1.txt,300,50,OPTIMAL,9.0,3.7207
-ILP (hustack),case_1.txt,300,50,OPTIMAL,9.0,13.7374
+SCIP (hustack),case_1.txt,300,50,OPTIMAL,9.0,13.7374
 Branch and Bound (hustack),case_1.txt,300,50,OPTIMAL,9.0,0.5718
 Greedy (hustack),case_1.txt,300,50,OPTIMAL,9.0,0.5677
 Hill Climbing (hustack),case_1.txt,300,50,OPTIMAL,9.0,5.5175
 Tabu Search (hustack),case_1.txt,300,50,OPTIMAL,9.0,14.4606
 CP-SAT (hustack),case_2.txt,500,50,OPTIMAL,8.0,9.6046
-ILP (hustack),case_2.txt,500,50,OPTIMAL,8.0,88.7884
+SCIP (hustack),case_2.txt,500,50,OPTIMAL,8.0,88.7884
 Branch and Bound (hustack),case_2.txt,500,50,OPTIMAL,8.0,1.7375
 Greedy (hustack),case_2.txt,500,50,OPTIMAL,8.0,1.6232
 Hill Climbing (hustack),case_2.txt,500,50,FEASIBLE,9.0,51.3434
 Tabu Search (hustack),case_2.txt,500,50,FEASIBLE,9.0,120.1977
 CP-SAT (hustack),case_3.txt,500,100,OPTIMAL,18.0,34.3829
-ILP (hustack),case_3.txt,500,100,INFEASIBLE/UNKNOWN,,120.1223
+SCIP (hustack),case_3.txt,500,100,INFEASIBLE/UNKNOWN,,120.1223
 Branch and Bound (hustack),case_3.txt,500,100,OPTIMAL,18.0,3.4923
 Greedy (hustack),case_3.txt,500,100,OPTIMAL,18.0,3.3896
 Hill Climbing (hustack),case_3.txt,500,100,FEASIBLE,19.0,120.0915
 Tabu Search (hustack),case_3.txt,500,100,FEASIBLE,20.0,120.144
 CP-SAT (hustack),case_4.txt,400,50,OPTIMAL,7.0,5.1221
-ILP (hustack),case_4.txt,400,50,OPTIMAL,7.0,15.1885
+SCIP (hustack),case_4.txt,400,50,OPTIMAL,7.0,15.1885
 Branch and Bound (hustack),case_4.txt,400,50,OPTIMAL,7.0,1.1162
 Greedy (hustack),case_4.txt,400,50,OPTIMAL,7.0,1.0914
 Hill Climbing (hustack),case_4.txt,400,50,OPTIMAL,7.0,9.8633
 Tabu Search (hustack),case_4.txt,400,50,OPTIMAL,7.0,31.458
 CP-SAT (medium),test_1.txt,75,18,OPTIMAL,3.0,0.2941
-ILP (medium),test_1.txt,75,18,OPTIMAL,3.0,0.1385
-Branch and Bound (medium),test_1.txt,75,18,OPTIMAL,3.0,0.0139
+SCIP (medium),test_1.txt,75,18,OPTIMAL,3.0,0.1385
+Branch and Bound (medium),test_1.txt,75,18,RECURSION_ERROR,,
 Greedy (medium),test_1.txt,75,18,OPTIMAL,3.0,0.0156
 Hill Climbing (medium),test_1.txt,75,18,OPTIMAL,3.0,0.0391
 Tabu Search (medium),test_1.txt,75,18,OPTIMAL,3.0,0.2329
 CP-SAT (medium),test_10.txt,86,16,OPTIMAL,3.0,0.2559
-ILP (medium),test_10.txt,86,16,OPTIMAL,3.0,0.1395
-Branch and Bound (medium),test_10.txt,86,16,OPTIMAL,3.0,0.0145
+SCIP (medium),test_10.txt,86,16,OPTIMAL,3.0,0.1395
+Branch and Bound (medium),test_10.txt,86,16,RECURSION_ERROR,,
 Greedy (medium),test_10.txt,86,16,OPTIMAL,3.0,0.0161
 Hill Climbing (medium),test_10.txt,86,16,OPTIMAL,3.0,0.0155
 Tabu Search (medium),test_10.txt,86,16,OPTIMAL,3.0,0.1087
 CP-SAT (medium),test_2.txt,38,20,OPTIMAL,3.0,0.1435
-ILP (medium),test_2.txt,38,20,OPTIMAL,3.0,0.0637
-Branch and Bound (medium),test_2.txt,38,20,OPTIMAL,3.0,0.0048
+SCIP (medium),test_2.txt,38,20,OPTIMAL,3.0,0.0637
+Branch and Bound (medium),test_2.txt,38,20,RECURSION_ERROR,,
 Greedy (medium),test_2.txt,38,20,OPTIMAL,3.0,0.0058
 Hill Climbing (medium),test_2.txt,38,20,OPTIMAL,3.0,0.0075
 Tabu Search (medium),test_2.txt,38,20,OPTIMAL,3.0,0.1344
 CP-SAT (medium),test_3.txt,91,30,OPTIMAL,5.0,0.5011
-ILP (medium),test_3.txt,91,30,OPTIMAL,5.0,0.3514
-Branch and Bound (medium),test_3.txt,91,30,OPTIMAL,5.0,0.0343
+SCIP (medium),test_3.txt,91,30,OPTIMAL,5.0,0.3514
+Branch and Bound (medium),test_3.txt,91,30,RECURSION_ERROR,,
 Greedy (medium),test_3.txt,91,30,OPTIMAL,5.0,0.0368
 Hill Climbing (medium),test_3.txt,91,30,OPTIMAL,5.0,0.071
 Tabu Search (medium),test_3.txt,91,30,OPTIMAL,5.0,0.3357
 CP-SAT (medium),test_4.txt,73,13,OPTIMAL,2.0,0.172
-ILP (medium),test_4.txt,73,13,OPTIMAL,2.0,0.0934
-Branch and Bound (medium),test_4.txt,73,13,OPTIMAL,2.0,0.0089
+SCIP (medium),test_4.txt,73,13,OPTIMAL,2.0,0.0934
+Branch and Bound (medium),test_4.txt,73,13,RECURSION_ERROR,,
 Greedy (medium),test_4.txt,73,13,OPTIMAL,2.0,0.0102
 Hill Climbing (medium),test_4.txt,73,13,OPTIMAL,2.0,0.019
 Tabu Search (medium),test_4.txt,73,13,OPTIMAL,2.0,0.3313
 CP-SAT (medium),test_5.txt,90,10,OPTIMAL,2.0,0.1586
-ILP (medium),test_5.txt,90,10,OPTIMAL,2.0,0.0791
-Branch and Bound (medium),test_5.txt,90,10,OPTIMAL,2.0,0.0109
+SCIP (medium),test_5.txt,90,10,OPTIMAL,2.0,0.0791
+Branch and Bound (medium),test_5.txt,90,10,RECURSION_ERROR,,
 Greedy (medium),test_5.txt,90,10,OPTIMAL,2.0,0.0112
 Hill Climbing (medium),test_5.txt,90,10,OPTIMAL,2.0,0.01
 Tabu Search (medium),test_5.txt,90,10,OPTIMAL,2.0,0.0622
 CP-SAT (medium),test_6.txt,67,10,OPTIMAL,2.0,0.1179
-ILP (medium),test_6.txt,67,10,OPTIMAL,2.0,0.0635
-Branch and Bound (medium),test_6.txt,67,10,OPTIMAL,2.0,0.0088
+SCIP (medium),test_6.txt,67,10,OPTIMAL,2.0,0.0635
+Branch and Bound (medium),test_6.txt,67,10,RECURSION_ERROR,,
 Greedy (medium),test_6.txt,67,10,OPTIMAL,2.0,0.0066
 Hill Climbing (medium),test_6.txt,67,10,OPTIMAL,2.0,0.011
 Tabu Search (medium),test_6.txt,67,10,OPTIMAL,2.0,0.0757
 CP-SAT (medium),test_7.txt,38,14,OPTIMAL,2.0,0.1182
-ILP (medium),test_7.txt,38,14,OPTIMAL,2.0,0.0454
-Branch and Bound (medium),test_7.txt,38,14,OPTIMAL,2.0,0.0035
+SCIP (medium),test_7.txt,38,14,OPTIMAL,2.0,0.0454
+Branch and Bound (medium),test_7.txt,38,14,RECURSION_ERROR,,
 Greedy (medium),test_7.txt,38,14,OPTIMAL,2.0,0.004
 Hill Climbing (medium),test_7.txt,38,14,OPTIMAL,2.0,0.0062
 Tabu Search (medium),test_7.txt,38,14,OPTIMAL,2.0,0.1122
 CP-SAT (medium),test_8.txt,49,14,OPTIMAL,2.0,0.1309
-ILP (medium),test_8.txt,49,14,OPTIMAL,2.0,0.0853
-Branch and Bound (medium),test_8.txt,49,14,OPTIMAL,2.0,0.0052
+SCIP (medium),test_8.txt,49,14,OPTIMAL,2.0,0.0853
+Branch and Bound (medium),test_8.txt,49,14,RECURSION_ERROR,,
 Greedy (medium),test_8.txt,49,14,OPTIMAL,2.0,0.006
 Hill Climbing (medium),test_8.txt,49,14,OPTIMAL,2.0,0.0126
 Tabu Search (medium),test_8.txt,49,14,OPTIMAL,2.0,0.6108
 CP-SAT (medium),test_9.txt,31,12,OPTIMAL,2.0,0.0791
-ILP (medium),test_9.txt,31,12,OPTIMAL,2.0,0.0286
-Branch and Bound (medium),test_9.txt,31,12,OPTIMAL,2.0,0.002
+SCIP (medium),test_9.txt,31,12,OPTIMAL,2.0,0.0286
+Branch and Bound (medium),test_9.txt,31,12,RECURSION_ERROR,,
 Greedy (medium),test_9.txt,31,12,OPTIMAL,2.0,0.0027
 Hill Climbing (medium),test_9.txt,31,12,OPTIMAL,2.0,0.003
 Tabu Search (medium),test_9.txt,31,12,OPTIMAL,2.0,0.0227
 CP-SAT (stress),test_1.txt,318,187,OPTIMAL,28.0,17.3378
-ILP (stress),test_1.txt,318,187,INFEASIBLE/UNKNOWN,,119.8072
-Branch and Bound (stress),test_1.txt,318,187,NOT_RUN,,0.0
+SCIP (stress),test_1.txt,318,187,OPTIMAL,28.0,241.9057
+Branch and Bound (stress),test_1.txt,318,187,RECURSION_ERROR,,
 Greedy (stress),test_1.txt,318,187,OPTIMAL,28.0,6.9475
-Hill Climbing (stress),test_1.txt,318,187,OPTIMAL,28.0,70.8415
-Tabu Search (stress),test_1.txt,318,187,FEASIBLE,29.0,300.2598
+Hill Climbing (stress),test_1.txt,318,187,OPTIMAL,28.0,69.4783
+Tabu Search (stress),test_1.txt,318,187,FEASIBLE,29.0,1200.0413
 CP-SAT (stress),test_10.txt,334,191,OPTIMAL,29.0,19.3606
-ILP (stress),test_10.txt,334,191,INFEASIBLE/UNKNOWN,,119.8464
-Branch and Bound (stress),test_10.txt,334,191,NOT_RUN,,0.0
+SCIP (stress),test_10.txt,334,191,OPTIMAL,29.0,356.1401
+Branch and Bound (stress),test_10.txt,334,191,RECURSION_ERROR,,
 Greedy (stress),test_10.txt,334,191,OPTIMAL,29.0,9.0694
-Hill Climbing (stress),test_10.txt,334,191,NO_FEASIBLE_SOLUTION,,302.1859
-Tabu Search (stress),test_10.txt,334,191,NO_FEASIBLE_SOLUTION,,300.5336
+Hill Climbing (stress),test_10.txt,334,191,OPTIMAL,29.0,804.1859
+Tabu Search (stress),test_10.txt,334,191,FEASIBLE,30.0,1202.5346
 CP-SAT (stress),test_2.txt,341,105,OPTIMAL,16.0,9.0039
-ILP (stress),test_2.txt,341,105,OPTIMAL,16.0,77.3868
-Branch and Bound (stress),test_2.txt,341,105,NOT_RUN,,0.0
+SCIP (stress),test_2.txt,341,105,OPTIMAL,16.0,51.481
+Branch and Bound (stress),test_2.txt,341,105,RECURSION_ERROR,,
 Greedy (stress),test_2.txt,341,105,OPTIMAL,16.0,1.7901
-Hill Climbing (stress),test_2.txt,341,105,FEASIBLE,17.0,300.1097
-Tabu Search (stress),test_2.txt,341,105,FEASIBLE,18.0,300.1293
+Hill Climbing (stress),test_2.txt,341,105,FEASIBLE,18.0,1200.068
+Tabu Search (stress),test_2.txt,341,105,FEASIBLE,18.0,1200.0153
 CP-SAT (stress),test_3.txt,446,167,OPTIMAL,25.0,29.0976
-ILP (stress),test_3.txt,446,167,INFEASIBLE/UNKNOWN,,120.4069
-Branch and Bound (stress),test_3.txt,446,167,NOT_RUN,,0.0
+SCIP (stress),test_3.txt,446,167,OPTIMAL,25.0,400.4266
+Branch and Bound (stress),test_3.txt,446,167,RECURSION_ERROR,,
 Greedy (stress),test_3.txt,446,167,OPTIMAL,25.0,9.0731
-Hill Climbing (stress),test_3.txt,446,167,OPTIMAL,25.0,201.3756
-Tabu Search (stress),test_3.txt,446,167,FEASIBLE,26.0,300.2764
+Hill Climbing (stress),test_3.txt,446,167,OPTIMAL,25.0,349.2801
+Tabu Search (stress),test_3.txt,446,167,FEASIBLE,27.0,1200.2578
 CP-SAT (stress),test_4.txt,417,105,OPTIMAL,16.0,13.508
-ILP (stress),test_4.txt,417,105,INFEASIBLE/UNKNOWN,,119.4545
-Branch and Bound (stress),test_4.txt,417,105,NOT_RUN,,0.0
+SCIP (stress),test_4.txt,417,105,OPTIMAL,16.0,197.7132
+Branch and Bound (stress),test_4.txt,417,105,RECURSION_ERROR,,
 Greedy (stress),test_4.txt,417,105,OPTIMAL,16.0,3.6127
-Hill Climbing (stress),test_4.txt,417,105,OPTIMAL,16.0,155.5482
-Tabu Search (stress),test_4.txt,417,105,FEASIBLE,17.0,301.073
+Hill Climbing (stress),test_4.txt,417,105,OPTIMAL,16.0,156.9013
+Tabu Search (stress),test_4.txt,417,105,FEASIBLE,17.0,1201.7406
 CP-SAT (stress),test_5.txt,425,150,OPTIMAL,23.0,18.9162
-ILP (stress),test_5.txt,425,150,INFEASIBLE/UNKNOWN,,120.2185
-Branch and Bound (stress),test_5.txt,425,150,NOT_RUN,,0.0
+SCIP (stress),test_5.txt,425,150,OPTIMAL,23.0,307.8432
+Branch and Bound (stress),test_5.txt,425,150,RECURSION_ERROR,,
 Greedy (stress),test_5.txt,425,150,OPTIMAL,23.0,3.8144
-Hill Climbing (stress),test_5.txt,425,150,NO_FEASIBLE_SOLUTION,,302.1052
-Tabu Search (stress),test_5.txt,425,150,NO_FEASIBLE_SOLUTION,,301.4093
+Hill Climbing (stress),test_5.txt,425,150,OPTIMAL,23.0,303.8421
+Tabu Search (stress),test_5.txt,425,150,FEASIBLE,24.0,1201.4093
 CP-SAT (stress),test_6.txt,352,134,OPTIMAL,20.0,13.3259
-ILP (stress),test_6.txt,352,134,INFEASIBLE/UNKNOWN,,119.7355
-Branch and Bound (stress),test_6.txt,352,134,NOT_RUN,,0.0
+SCIP (stress),test_6.txt,352,134,OPTIMAL,20.0,219.7416
+Branch and Bound (stress),test_6.txt,352,134,RECURSION_ERROR,,
 Greedy (stress),test_6.txt,352,134,OPTIMAL,20.0,3.8033
-Hill Climbing (stress),test_6.txt,352,134,NO_FEASIBLE_SOLUTION,,305.3806
-Tabu Search (stress),test_6.txt,352,134,NO_FEASIBLE_SOLUTION,,303.096
+Hill Climbing (stress),test_6.txt,352,134,FEASIBLE,21.0,1198.7314
+Tabu Search (stress),test_6.txt,352,134,FEASIBLE,21.0,1204.096
 CP-SAT (stress),test_7.txt,483,147,OPTIMAL,22.0,61.2653
-ILP (stress),test_7.txt,483,147,INFEASIBLE/UNKNOWN,,119.7237
-Branch and Bound (stress),test_7.txt,483,147,NOT_RUN,,0.0
+SCIP (stress),test_7.txt,483,147,OPTIMAL,22.0,416.1639
+Branch and Bound (stress),test_7.txt,483,147,RECURSION_ERROR,,
 Greedy (stress),test_7.txt,483,147,OPTIMAL,22.0,8.855
-Hill Climbing (stress),test_7.txt,483,147,NO_FEASIBLE_SOLUTION,,303.0934
-Tabu Search (stress),test_7.txt,483,147,NO_FEASIBLE_SOLUTION,,305.2984
+Hill Climbing (stress),test_7.txt,483,147,OPTIMAL,22.0,502.5578
+Tabu Search (stress),test_7.txt,483,147,FEASIBLE,23.0,1200.2984
 CP-SAT (stress),test_8.txt,403,194,OPTIMAL,29.0,51.5306
-ILP (stress),test_8.txt,403,194,INFEASIBLE/UNKNOWN,,119.8814
-Branch and Bound (stress),test_8.txt,403,194,NOT_RUN,,0.0
+SCIP (stress),test_8.txt,403,194,OPTIMAL,29.0,471.9366
+Branch and Bound (stress),test_8.txt,403,194,RECURSION_ERROR,,
 Greedy (stress),test_8.txt,403,194,OPTIMAL,29.0,11.3237
-Hill Climbing (stress),test_8.txt,403,194,NO_FEASIBLE_SOLUTION,,303.6243
-Tabu Search (stress),test_8.txt,403,194,NO_FEASIBLE_SOLUTION,,306.9174
-CP-SAT (stress),test_9.txt,485,171,FEASIBLE,28.0,130.8659
-ILP (stress),test_9.txt,485,171,INFEASIBLE/UNKNOWN,,120.0429
-Branch and Bound (stress),test_9.txt,485,171,NOT_RUN,,0.0001
+Hill Climbing (stress),test_8.txt,403,194,OPTIMAL,29.0,506.6243
+Tabu Search (stress),test_8.txt,403,194,FEASIBLE,30.0,1205.9174
+CP-SAT (stress),test_9.txt,485,171,OPTIMAL,26.0,130.8659
+SCIP (stress),test_9.txt,485,171,OPTIMAL,26.0,559.6428
+Branch and Bound (stress),test_9.txt,485,171,RECURSION_ERROR,,
 Greedy (stress),test_9.txt,485,171,OPTIMAL,26.0,17.2068
-Hill Climbing (stress),test_9.txt,485,171,NO_FEASIBLE_SOLUTION,,301.7572
-Tabu Search (stress),test_9.txt,485,171,NO_FEASIBLE_SOLUTION,,307.1004
+Hill Climbing (stress),test_9.txt,485,171,OPTIMAL,26.0,709.7572
+Tabu Search (stress),test_9.txt,485,171,FEASIBLE,27.0,1207.1004
 CP-SAT (edge),clustered_off_feasible_1.txt,60,20,OPTIMAL,3.0,0.2348
-ILP (edge),clustered_off_feasible_1.txt,60,20,OPTIMAL,3.0,0.1136
+SCIP (edge),clustered_off_feasible_1.txt,60,20,OPTIMAL,3.0,0.1136
 Greedy (edge),clustered_off_feasible_1.txt,60,20,OPTIMAL,3.0,0.012
 CP-SAT (edge),clustered_off_feasible_2.txt,80,30,OPTIMAL,5.0,0.5874
-ILP (edge),clustered_off_feasible_2.txt,80,30,OPTIMAL,5.0,0.2945
+SCIP (edge),clustered_off_feasible_2.txt,80,30,OPTIMAL,5.0,0.2945
 Greedy (edge),clustered_off_feasible_2.txt,80,30,OPTIMAL,5.0,0.0306
 CP-SAT (edge),clustered_off_hard_1.txt,120,45,OPTIMAL,6.0,1.0593
-ILP (edge),clustered_off_hard_1.txt,120,45,OPTIMAL,6.0,11.1729
+SCIP (edge),clustered_off_hard_1.txt,120,45,OPTIMAL,6.0,11.1729
 Greedy (edge),clustered_off_hard_1.txt,120,45,OPTIMAL,6.0,0.098
 CP-SAT (edge),infeasible_after_night_rest.txt,4,2,INFEASIBLE,,0.002
-ILP (edge),infeasible_after_night_rest.txt,4,2,INFEASIBLE/UNKNOWN,,0.0018
+SCIP (edge),infeasible_after_night_rest.txt,4,2,INFEASIBLE/UNKNOWN,,0.0018
 Greedy (edge),infeasible_after_night_rest.txt,4,2,NO_FEASIBLE_SOLUTION,,0.0086
 CP-SAT (edge),infeasible_daily_shortage.txt,20,5,INFEASIBLE,,0.0289
-ILP (edge),infeasible_daily_shortage.txt,20,5,INFEASIBLE/UNKNOWN,,0.0065
+SCIP (edge),infeasible_daily_shortage.txt,20,5,INFEASIBLE/UNKNOWN,,0.0065
 Greedy (edge),infeasible_daily_shortage.txt,20,5,NO_FEASIBLE_SOLUTION,,0.0488
 CP-SAT (edge),infeasible_exact_staff_multi_day.txt,16,4,INFEASIBLE,,0.0445
-ILP (edge),infeasible_exact_staff_multi_day.txt,16,4,INFEASIBLE/UNKNOWN,,0.0146
+SCIP (edge),infeasible_exact_staff_multi_day.txt,16,4,INFEASIBLE/UNKNOWN,,0.0146
 Greedy (edge),infeasible_exact_staff_multi_day.txt,16,4,NO_FEASIBLE_SOLUTION,,0.0859
 CP-SAT (edge),repair_pressure_1.txt,96,40,OPTIMAL,6.0,1.6491
-ILP (edge),repair_pressure_1.txt,96,40,OPTIMAL,6.0,1.9245
+SCIP (edge),repair_pressure_1.txt,96,40,OPTIMAL,6.0,1.9245
 Greedy (edge),repair_pressure_1.txt,96,40,OPTIMAL,6.0,0.1628
 CP-SAT (edge),repair_pressure_2.txt,150,60,OPTIMAL,8.0,3.791
-ILP (edge),repair_pressure_2.txt,150,60,OPTIMAL,8.0,21.205
+SCIP (edge),repair_pressure_2.txt,150,60,OPTIMAL,8.0,21.205
 Greedy (edge),repair_pressure_2.txt,150,60,FEASIBLE,9.0,43.7265
 CP-SAT (edge),repair_pressure_3.txt,220,80,OPTIMAL,15.0,25.4945
-ILP (edge),repair_pressure_3.txt,220,80,OPTIMAL,15.0,61.1937
+SCIP (edge),repair_pressure_3.txt,220,80,OPTIMAL,15.0,61.1937
 Greedy (edge),repair_pressure_3.txt,220,80,FEASIBLE,16.0,53.064
 CP-SAT (edge),tight_capacity_1.txt,24,10,OPTIMAL,2.0,0.1334
-ILP (edge),tight_capacity_1.txt,24,10,OPTIMAL,2.0,0.035
+SCIP (edge),tight_capacity_1.txt,24,10,OPTIMAL,2.0,0.035
 Greedy (edge),tight_capacity_1.txt,24,10,OPTIMAL,2.0,0.0024
 CP-SAT (edge),tight_capacity_2.txt,32,14,OPTIMAL,3.0,0.2253
-ILP (edge),tight_capacity_2.txt,32,14,OPTIMAL,3.0,0.0625
+SCIP (edge),tight_capacity_2.txt,32,14,OPTIMAL,3.0,0.0625
 Greedy (edge),tight_capacity_2.txt,32,14,OPTIMAL,3.0,0.0057
 CP-SAT (edge),tight_capacity_3.txt,48,21,OPTIMAL,4.0,0.5065
-ILP (edge),tight_capacity_3.txt,48,21,OPTIMAL,4.0,0.2327
+SCIP (edge),tight_capacity_3.txt,48,21,OPTIMAL,4.0,0.2327
 Greedy (edge),tight_capacity_3.txt,48,21,OPTIMAL,4.0,0.0219
 Hill Climbing (edge),clustered_off_feasible_1.txt,60,20,OPTIMAL,3.0,0.0188
 Tabu Search (edge),clustered_off_feasible_1.txt,60,20,OPTIMAL,3.0,0.1424
@@ -332,6 +332,6 @@ Branch and Bound (edge),infeasible_exact_staff_multi_day.txt,16,4,TIMEOUT,,300.0
 Branch and Bound (edge),repair_pressure_1.txt,96,40,NOT_RUN,,0.0
 Branch and Bound (edge),repair_pressure_2.txt,150,60,NOT_RUN,,0.0
 Branch and Bound (edge),repair_pressure_3.txt,220,80,NOT_RUN,,0.0
-Branch and Bound (edge),tight_capacity_1.txt,24,10,OPTIMAL,2,0.114
-Branch and Bound (edge),tight_capacity_2.txt,32,14,OPTIMAL,3,3.1201
+Branch and Bound (edge),tight_capacity_1.txt,24,10,OPTIMAL,2.0,0.114
+Branch and Bound (edge),tight_capacity_2.txt,32,14,OPTIMAL,3.0,3.1201
 Branch and Bound (edge),tight_capacity_3.txt,48,21,NOT_RUN,,0.0

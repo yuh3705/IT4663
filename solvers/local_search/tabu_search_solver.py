@@ -451,6 +451,7 @@ def solve(N, D, A, B, F, time_limit=60, max_iterations=20000, tabu_tenure=30, se
     violation_history = [current_score[0]]
     stable_iterations = 0
     max_stable = 500
+    best_restart_score = current_score
 
     iteration = 0
     while iteration < max_iterations and time.time() - start_time < time_limit:
@@ -463,6 +464,7 @@ def solve(N, D, A, B, F, time_limit=60, max_iterations=20000, tabu_tenure=30, se
         if stable_iterations > max_stable:
             current = _construct_relaxed_initial_solution(N, D, A, rng)
             current_score = _score(current, N, D, A, B, F)
+            best_restart_score = current_score
             tabu_until.clear()
             stable_iterations = 0
 
@@ -527,7 +529,6 @@ def solve(N, D, A, B, F, time_limit=60, max_iterations=20000, tabu_tenure=30, se
         if chosen_action is None:
             stable_iterations = max_stable + 1
             continue
-
         action_type, payload, tabu_keys = chosen_action
 
         if action_type == "swap":
@@ -542,9 +543,11 @@ def solve(N, D, A, B, F, time_limit=60, max_iterations=20000, tabu_tenure=30, se
         for key in tabu_keys:
             tabu_until[key] = iteration + tabu_tenure
 
-        if current_score < best_score:
-            best_score = current_score
-            best_any = current.copy()
+        if current_score < best_restart_score:
+            best_restart_score = current_score
+            if current_score < best_score:
+                best_score = current_score
+                best_any = current.copy()
             stable_iterations = 0
 
         if current_score[0] == 0:
